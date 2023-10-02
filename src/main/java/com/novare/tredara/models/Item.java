@@ -2,7 +2,6 @@ package com.novare.tredara.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.util.Date;
 import java.util.List;
 
@@ -22,9 +21,9 @@ public class Item {
     @Column(name = "START_PRICE")
     private double startPrice;
     @Column(name = "START_TIME")
-    private Date startTime;
+    private Date startDateTime;
     @Column(name = "END_TIME")
-    private Date endTime;
+    private Date endDateTime;
 
     @Column(name = "STATUS")
     private EItemStatus status;
