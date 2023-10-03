@@ -1,11 +1,22 @@
 package com.novare.tredara.service;
 
+import com.novare.tredara.exceptions.ResourceNotFoundException;
+import com.novare.tredara.models.Image;
 import com.novare.tredara.models.Item;
+import com.novare.tredara.models.User;
 import com.novare.tredara.payloads.ItemDTO;
+import com.novare.tredara.repositories.ImageRepo;
 import com.novare.tredara.repositories.ItemRepo;
+import com.novare.tredara.repositories.UserRepo;
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.sql.rowset.serial.SerialBlob;
+import java.sql.Blob;
+import java.sql.SQLException;
+import java.util.Optional;
 
 @Service
 public class ItemService {
@@ -14,25 +25,51 @@ public class ItemService {
 
     private ModelMapper modelMapper;
 
+    private UserRepo userRepo;
+
+    private ImageRepo imageRepo;
+
     @Autowired
-    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper) {
+    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, ImageRepo imageRepo) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
+        this.userRepo = userRepo;
+        this.imageRepo= imageRepo;
     }
 
-    public ItemDTO createItem(ItemDTO itemDTO) {
+    public ItemDTO createItem(ItemDTO itemDTO) throws SQLException {
 
-        /*
-        Validations
-         */
+        byte[] decodedByte = Base64.decodeBase64(itemDTO.getImageString());
+        Blob imageBlob = new SerialBlob(decodedByte);
 
         Item item = this.dtoToItem(itemDTO);
         Item savedItem = this.itemRepo.save(item);
-        return this.itemToDto(savedItem);
+
+        Image image = new Image();
+        image.setItem(savedItem);
+        image.setImageBlob(imageBlob);
+
+        imageRepo.save(image);
+        
+
+       ItemDTO savedtemDTO =  itemToDto(savedItem);
+       savedtemDTO.setImageString(itemDTO.getImageString());
+       return savedtemDTO;
+
     }
 
     private Item dtoToItem(ItemDTO itemDTO) {
-        Item item = this.modelMapper.map(itemDTO, Item.class);
+        User user = this.userRepo.findById(itemDTO.getUserID()).orElseThrow(() -> new ResourceNotFoundException("User", "Id", itemDTO.getUserID()));
+
+        Item item = new Item();
+        item.setTitle(itemDTO.getTitle());
+        item.setDescription(itemDTO.getDescription());
+        item.setStartPrice(itemDTO.getStartPrice());
+        item.setStartDateTime(itemDTO.getStartDateTime());
+        item.setEndDateTime(itemDTO.getEndDateTime());
+        item.setStatus(itemDTO.getStatus());
+        item.setUser(user);
+
         return item;
     }
 

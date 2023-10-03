@@ -1,6 +1,8 @@
 package com.novare.tredara.payloads;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.novare.tredara.models.EItemStatus;
+import com.novare.tredara.models.Image;
 import com.novare.tredara.models.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
@@ -12,6 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
+import java.sql.Blob;
 import java.util.Date;
 
 
@@ -34,4 +37,6 @@ public class ItemDTO {
     private EItemStatus status;
 
     private long userID;
+
+    private String imageString;
 }

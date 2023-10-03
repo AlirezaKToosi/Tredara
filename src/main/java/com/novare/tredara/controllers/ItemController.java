@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.SQLException;
+
 @RestController
 @RequestMapping("/api/v1")
 public class ItemController {
@@ -23,7 +25,7 @@ public class ItemController {
     }
 
     @PostMapping("/item/create")
-    public ResponseEntity<ItemDTO> createItem(@Valid @RequestBody ItemDTO itemDTO) {
+    public ResponseEntity<ItemDTO> createItem(@Valid @RequestBody ItemDTO itemDTO) throws SQLException {
         ItemDTO createItemDto = this.itemService.createItem(itemDTO);
         return new ResponseEntity<>(createItemDto, HttpStatus.CREATED);
     }
