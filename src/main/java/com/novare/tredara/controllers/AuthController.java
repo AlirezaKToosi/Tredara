@@ -2,10 +2,10 @@ package com.novare.tredara.controllers;
 
 import com.novare.tredara.models.ERole;
 import com.novare.tredara.models.User;
-import com.novare.tredara.payload.InfoResponse;
-import com.novare.tredara.payload.LoginRequest;
-import com.novare.tredara.payload.SignupRequest;
-import com.novare.tredara.payload.UserInfoResponse;
+import com.novare.tredara.payloads.InfoResponse;
+import com.novare.tredara.payloads.LoginRequest;
+import com.novare.tredara.payloads.SignupRequest;
+import com.novare.tredara.payloads.UserInfoResponse;
 import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.security.userdetails.UserDetailsImpl;
 import com.novare.tredara.services.UserService;
