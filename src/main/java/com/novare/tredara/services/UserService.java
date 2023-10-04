@@ -27,5 +27,18 @@ public class UserService {
     public boolean existsByEmail(String email) {
         return userRepo.existsByEmail(email);
     }
+    public boolean isPasswordValid(String password) {
+        // Define password validation criteria using regular expressions
+        String lowerCaseRegex = ".*[a-z].*";
+        String specialCharacterRegex = ".*[!@#$%^&*()_+={}.<>?].*";
+        String upperCaseRegex = ".*[A-Z].*";
+
+        // Check if the password matches all criteria
+        return password != null
+                && password.length()>= 8
+                && password.matches(lowerCaseRegex)
+                && password.matches(specialCharacterRegex)
+                && password.matches(upperCaseRegex);
+    }
 
 }
