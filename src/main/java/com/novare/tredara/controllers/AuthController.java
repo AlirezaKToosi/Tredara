@@ -23,10 +23,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 
-
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -70,15 +69,20 @@ public class AuthController {
     }
 
     @PostMapping("/signup/")
-    public ResponseEntity<?> registerUser(@RequestBody SignupRequest signUpRequest) {
-
+    public ResponseEntity<?> registerUser(@RequestBody @Valid SignupRequest signUpRequest) {
+        String password = signUpRequest.getPassword();
+        if (!userService.isPasswordValid(password)) {
+            return ResponseEntity.badRequest().body(new InfoResponse("Error: Password does not meet the criteria. " +
+                    "It must be at least 8 characters and contain uppercase and lowercase letters and special symbols"));
+        }
         if (userService.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity.badRequest().body(new InfoResponse("Error: Email is already in use!"));
         }
+
         // Create new user's account
         User user = new User(signUpRequest.getName(),
                 signUpRequest.getEmail(),
-                signUpRequest.getPassword());
+                password);
         user.setRole(ERole.ROLE_CUSTOMER);
         final User createUser = userService.saveUser(user);
 
