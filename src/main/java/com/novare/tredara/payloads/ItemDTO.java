@@ -23,6 +23,8 @@ import java.util.Date;
 @Setter
 public class ItemDTO {
 
+    private Long id;
+
     @NotEmpty (message = "Title is required !!")
     private String title;
 
@@ -39,4 +41,5 @@ public class ItemDTO {
     private long userID;
 
     private String imageString;
+    
 }
