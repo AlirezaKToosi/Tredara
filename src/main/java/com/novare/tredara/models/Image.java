@@ -3,7 +3,6 @@ package com.novare.tredara.models;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.Hibernate;
-
 import java.sql.Blob;
 import java.util.Objects;
 
