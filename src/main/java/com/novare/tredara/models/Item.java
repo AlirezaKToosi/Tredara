@@ -40,5 +40,6 @@ public class Item {
 
     @OneToMany(mappedBy = "item")
     private List<Notification> notifications;
-
+    @OneToMany(mappedBy = "item")
+    private List<Image> images;
 }

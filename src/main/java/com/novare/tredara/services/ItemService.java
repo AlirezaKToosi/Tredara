@@ -1,4 +1,4 @@
-package com.novare.tredara.service;
+package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
 import com.novare.tredara.models.Image;
@@ -12,11 +12,12 @@ import org.apache.tomcat.util.codec.binary.Base64;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Blob;
 import java.sql.SQLException;
-import java.util.Optional;
+import java.util.List;
 
 @Service
 public class ItemService {
@@ -34,7 +35,7 @@ public class ItemService {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
-        this.imageRepo= imageRepo;
+        this.imageRepo = imageRepo;
     }
 
     public ItemDTO createItem(ItemDTO itemDTO) throws SQLException {
@@ -50,12 +51,34 @@ public class ItemService {
         image.setImageBlob(imageBlob);
 
         imageRepo.save(image);
-        
 
-       ItemDTO savedtemDTO =  itemToDto(savedItem);
-       savedtemDTO.setImageString(itemDTO.getImageString());
-       return savedtemDTO;
 
+        ItemDTO savedtemDTO = itemToDto(savedItem);
+        savedtemDTO.setImageString(itemDTO.getImageString());
+        return savedtemDTO;
+
+    }
+
+    @Transactional(readOnly = true)
+    public ItemDTO getItemDetails(Long itemId) throws SQLException {
+        Item item = this.itemRepo.findById(itemId)
+                .orElseThrow(() -> new ResourceNotFoundException("Item", "id", itemId));
+
+        ItemDTO itemDTO = itemToDto(item);
+
+        List<Image> images = item.getImages();
+
+        if (!images.isEmpty()) {
+            // Select the first image and convert it to a Base64-encoded string
+            //Show just one image per item
+            Image firstImage = images.get(0);
+            Blob imageBlob = firstImage.getImageBlob();
+            byte[] imageBytes = imageBlob.getBytes(1, (int) imageBlob.length());
+            String imageString = Base64.encodeBase64String(imageBytes);
+            itemDTO.setImageString(imageString);
+        }
+
+        return itemDTO;
     }
 
     private Item dtoToItem(ItemDTO itemDTO) {
@@ -77,5 +100,4 @@ public class ItemService {
         ItemDTO itemDTO = this.modelMapper.map(item, ItemDTO.class);
         return itemDTO;
     }
-
 }
