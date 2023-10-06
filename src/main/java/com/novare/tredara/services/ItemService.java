@@ -2,7 +2,6 @@ package com.novare.tredara.services;
 
 import com.novare.tredara.models.Item;
 import com.novare.tredara.payloads.ItemDTO;
-import com.novare.tredara.repositories.ImageRepo;
 import com.novare.tredara.repositories.ItemRepo;
 import com.novare.tredara.repositories.UserRepo;
 import com.novare.tredara.utils.FileUtil;
@@ -30,7 +29,7 @@ public class ItemService {
     private UserRepo userRepo;
 
     @Autowired
-    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, ImageRepo imageRepo, FileSystemStorageService fileSystemStorageService) {
+    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
