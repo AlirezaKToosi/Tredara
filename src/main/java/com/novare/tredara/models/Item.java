@@ -31,6 +31,9 @@ public class Item {
     @Column(name = "STATUS")
     private EItemStatus status;
 
+    @Column(name = "IMAGE_URL")
+    private String image_url;
+
     @ManyToOne
     @JoinColumn(name = "SELLER_USER_ID")
     private User user;
