@@ -9,22 +9,37 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
 public class ItemController {
 
-    private final ItemService itemService;
+    private ItemService itemService;
 
     @Autowired
-    public ItemController(ItemService itemService) {
+    public ItemController(ItemService itemService){
         this.itemService = itemService;
     }
 
     @PostMapping("/item/create")
-    public ResponseEntity<ItemDTO> createItem(@Valid @RequestBody ItemDTO itemDTO) throws SQLException {
+    public ResponseEntity<ItemDTO> createItem(@Valid @RequestBody ItemDTO itemDTO) {
         ItemDTO createItemDto = this.itemService.createItem(itemDTO);
         return new ResponseEntity<>(createItemDto, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/items")
+    public ResponseEntity<List<ItemDTO>> getAllItems() {
+        return ResponseEntity.ok(this.itemService.getAllItems());
+    }
+
+    @GetMapping("/endinngSoonItems")
+    public ResponseEntity<List<ItemDTO>> getEndingSoonItems()  {
+        return ResponseEntity.ok(this.itemService.getEndingSoonItems());
+    }
+    @GetMapping("/latestItems")
+    public ResponseEntity<List<ItemDTO>> getLatestItems()  {
+        return ResponseEntity.ok(this.itemService.getEndingSoonItems());
     }
 
     @GetMapping("/item/{itemId}")

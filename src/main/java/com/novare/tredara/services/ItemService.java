@@ -1,98 +1,95 @@
 package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
-import com.novare.tredara.models.Image;
 import com.novare.tredara.models.Item;
-import com.novare.tredara.models.User;
 import com.novare.tredara.payloads.ItemDTO;
-import com.novare.tredara.repositories.ImageRepo;
 import com.novare.tredara.repositories.ItemRepo;
 import com.novare.tredara.repositories.UserRepo;
+import com.novare.tredara.utils.FileUtil;
+import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.sql.rowset.serial.SerialBlob;
-import java.sql.Blob;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
+@Log4j2
 public class ItemService {
 
+    FileSystemStorageService fileSystemStorageService;
     private ItemRepo itemRepo;
-
     private ModelMapper modelMapper;
-
     private UserRepo userRepo;
 
-    private ImageRepo imageRepo;
-
     @Autowired
-    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, ImageRepo imageRepo) {
+    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
-        this.imageRepo = imageRepo;
+        this.fileSystemStorageService = fileSystemStorageService;
     }
 
-    public ItemDTO createItem(ItemDTO itemDTO) throws SQLException {
+    public ItemDTO createItem(ItemDTO itemDTO) {
+        String logMessage;
 
-        byte[] decodedByte = Base64.decodeBase64(itemDTO.getImageString());
-        Blob imageBlob = new SerialBlob(decodedByte);
+        if (itemDTO.getImage_url() != null) {
+            logMessage = "Trying to convert base64 image and store it to filesystem..";
+            log.info(logMessage);
 
+            String imageDataString = FileUtil.getImageFromBase64(itemDTO.getImage_url());
+            byte[] imageDecodedBytes = Base64.decodeBase64(imageDataString);
+
+            String imageURL = this.fileSystemStorageService.storeBase64(imageDecodedBytes);
+
+            String baseURL = "http://localhost:8080/files/";
+            String complete_image_URL = baseURL + imageURL;
+
+            logMessage = "image successfully stored, image url is: " + complete_image_URL;
+            log.info(logMessage);
+            itemDTO.setImage_url(complete_image_URL);
+        }
         Item item = this.dtoToItem(itemDTO);
         Item savedItem = this.itemRepo.save(item);
-
-        Image image = new Image();
-        image.setItem(savedItem);
-        image.setImageBlob(imageBlob);
-
-        imageRepo.save(image);
-
-
-        ItemDTO savedtemDTO = itemToDto(savedItem);
-        savedtemDTO.setImageString(itemDTO.getImageString());
-        return savedtemDTO;
-
+        logMessage = "Item is saved in database";
+        log.info(logMessage);
+        return this.itemToDto(savedItem);
     }
 
+    public List<ItemDTO> getAllItems() {
+        List<Item> items = this.itemRepo.findAll();
+        List<ItemDTO> itemDTOS = items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
+        return itemDTOS;
+    }
     @Transactional(readOnly = true)
     public ItemDTO getItemDetails(Long itemId) throws SQLException {
         Item item = this.itemRepo.findById(itemId)
                 .orElseThrow(() -> new ResourceNotFoundException("Item", "id", itemId));
-
         ItemDTO itemDTO = itemToDto(item);
-
-        List<Image> images = item.getImages();
-
-        if (!images.isEmpty()) {
-            // Select the first image and convert it to a Base64-encoded string
-            //Show just one image per item
-            Image firstImage = images.get(0);
-            Blob imageBlob = firstImage.getImageBlob();
-            byte[] imageBytes = imageBlob.getBytes(1, (int) imageBlob.length());
-            String imageString = Base64.encodeBase64String(imageBytes);
-            itemDTO.setImageString(imageString);
-        }
-
         return itemDTO;
     }
 
+    public List<ItemDTO> getEndingSoonItems(){
+        String sortBy = "endDateTime";
+        Pageable pageable = PageRequest.of(0, 5, Sort.Direction.ASC, sortBy);
+        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+
+
+        List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
+
+        return itemDTOS;
+    }
+
     private Item dtoToItem(ItemDTO itemDTO) {
-        User user = this.userRepo.findById(itemDTO.getUserID()).orElseThrow(() -> new ResourceNotFoundException("User", "Id", itemDTO.getUserID()));
-
-        Item item = new Item();
-        item.setTitle(itemDTO.getTitle());
-        item.setDescription(itemDTO.getDescription());
-        item.setStartPrice(itemDTO.getStartPrice());
-        item.setStartDateTime(itemDTO.getStartDateTime());
-        item.setEndDateTime(itemDTO.getEndDateTime());
-        item.setStatus(itemDTO.getStatus());
-        item.setUser(user);
-
+        Item item = this.modelMapper.map(itemDTO, Item.class);
         return item;
     }
 
@@ -101,3 +98,5 @@ public class ItemService {
         return itemDTO;
     }
 }
+
+
