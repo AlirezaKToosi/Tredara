@@ -70,7 +70,18 @@ public class ItemService {
 
     public List<ItemDTO> getEndingSoonItems(){
         String sortBy = "endDateTime";
-        Pageable pageable = PageRequest.of(0, 5, Sort.Direction.ASC, sortBy);
+        Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
+        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+
+
+        List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
+
+        return itemDTOS;
+    }
+    public List<ItemDTO> getLatestItems() {
+
+        String sortBy = "startDateTime";
+        Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
         Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
 
 
@@ -88,4 +99,6 @@ public class ItemService {
         ItemDTO itemDTO = this.modelMapper.map(item, ItemDTO.class);
         return itemDTO;
     }
+
+
 }
