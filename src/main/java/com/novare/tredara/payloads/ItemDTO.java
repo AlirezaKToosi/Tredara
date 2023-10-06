@@ -38,5 +38,5 @@ public class ItemDTO {
 
     private long userID;
 
-    private String imageString;
+    private String image_url;
 }
