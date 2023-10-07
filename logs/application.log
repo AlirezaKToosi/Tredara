@@ -1654,3 +1654,96 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 2023-10-06T23:17:43.788+02:00  INFO 15340 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-10-06T23:17:43.837+02:00  INFO 15340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-10-06T23:17:43.882+02:00  INFO 15340 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-07T00:26:19.684+02:00  INFO 21084 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 21084 (C:\Drive D\Alireza\Back end course\project 6\Tredara\target\classes started by aktoo in C:\Drive D\Alireza\Back end course\project 6\Tredara)
+2023-10-07T00:26:19.687+02:00  INFO 21084 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-07T00:26:20.325+02:00  INFO 21084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-07T00:26:20.383+02:00  INFO 21084 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 2 JPA repository interfaces.
+2023-10-07T00:26:20.829+02:00  INFO 21084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-07T00:26:20.837+02:00  INFO 21084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-07T00:26:20.837+02:00  INFO 21084 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-07T00:26:20.903+02:00  INFO 21084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-07T00:26:20.903+02:00  INFO 21084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1168 ms
+2023-10-07T00:26:20.990+02:00  INFO 21084 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-07T00:26:21.053+02:00  INFO 21084 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-07T00:26:21.057+02:00  INFO 21084 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-07T00:26:21.178+02:00  INFO 21084 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T00:26:21.294+02:00  INFO 21084 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-07T00:26:21.308+02:00  INFO 21084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-07T00:26:21.582+02:00  INFO 21084 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d120d7c
+2023-10-07T00:26:21.584+02:00  INFO 21084 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-07T00:26:21.857+02:00  INFO 21084 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T00:26:22.438+02:00  INFO 21084 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-07T00:26:22.861+02:00  INFO 21084 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07T00:26:23.297+02:00  WARN 21084 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-07T00:26:23.503+02:00  INFO 21084 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f3c27e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fd4850b, org.springframework.security.web.context.SecurityContextHolderFilter@5cb4ba80, org.springframework.security.web.header.HeaderWriterFilter@3f473daf, org.springframework.security.web.authentication.logout.LogoutFilter@25814d3c, com.novare.tredara.security.jwt.AuthTokenFilter@3b3b2290, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@507187c1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5bb90b89, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1db9d253, org.springframework.security.web.session.SessionManagementFilter@72e4ffa2, org.springframework.security.web.access.ExceptionTranslationFilter@7f33ad20, org.springframework.security.web.access.intercept.AuthorizationFilter@21262bde]
+2023-10-07T00:26:23.688+02:00  INFO 21084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-07T00:26:23.694+02:00  INFO 21084 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 4.392 seconds (process running for 5.09)
+2023-10-07T00:27:13.944+02:00  INFO 21084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-07T00:27:13.944+02:00  INFO 21084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-07T00:27:13.944+02:00  INFO 21084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-10-07T00:29:19.438+02:00  INFO 21084 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Item is saved in database
+2023-10-07T00:40:36.415+02:00  WARN 21084 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m14s597ms301µs).
+2023-10-07T00:40:41.406+02:00  INFO 21084 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07T00:40:41.437+02:00  INFO 21084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-07T00:40:41.505+02:00  INFO 21084 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-07T00:40:47.471+02:00  INFO 24452 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 24452 (C:\Drive D\Alireza\Back end course\project 6\Tredara\target\classes started by aktoo in C:\Drive D\Alireza\Back end course\project 6\Tredara)
+2023-10-07T00:40:47.473+02:00  INFO 24452 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-07T00:40:48.185+02:00  INFO 24452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-07T00:40:48.254+02:00  INFO 24452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+2023-10-07T00:40:48.861+02:00  INFO 24452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-07T00:40:48.873+02:00  INFO 24452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-07T00:40:48.873+02:00  INFO 24452 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-07T00:40:48.954+02:00  INFO 24452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-07T00:40:48.955+02:00  INFO 24452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1438 ms
+2023-10-07T00:40:49.061+02:00  INFO 24452 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-07T00:40:49.138+02:00  INFO 24452 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-07T00:40:49.141+02:00  INFO 24452 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-07T00:40:49.326+02:00  INFO 24452 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T00:40:49.586+02:00  INFO 24452 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-07T00:40:49.603+02:00  INFO 24452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-07T00:40:50.008+02:00  INFO 24452 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79d4ff58
+2023-10-07T00:40:50.010+02:00  INFO 24452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-07T00:40:50.326+02:00  INFO 24452 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T00:40:51.247+02:00  INFO 24452 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-07T00:40:51.388+02:00  INFO 24452 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07T00:40:51.960+02:00  WARN 24452 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-07T00:40:52.229+02:00  INFO 24452 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@533690d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3bf306d3, org.springframework.security.web.context.SecurityContextHolderFilter@7894a250, org.springframework.security.web.header.HeaderWriterFilter@7641c4e7, org.springframework.security.web.authentication.logout.LogoutFilter@373c8f35, com.novare.tredara.security.jwt.AuthTokenFilter@50d6af87, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38affd02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fb24ad8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5101b9, org.springframework.security.web.session.SessionManagementFilter@397b5b2d, org.springframework.security.web.access.ExceptionTranslationFilter@6a1b4854, org.springframework.security.web.access.intercept.AuthorizationFilter@3031d9e9]
+2023-10-07T00:40:52.627+02:00  INFO 24452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-07T00:40:52.637+02:00  INFO 24452 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 5.61 seconds (process running for 6.904)
+2023-10-07T00:43:03.717+02:00  INFO 24452 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-07T00:43:03.735+02:00  INFO 24452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-07T00:43:03.780+02:00  INFO 24452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 44 ms
+2023-10-07T00:51:18.637+02:00  WARN 24452 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m28s487ms916µs700ns).
+2023-10-07T00:51:18.875+02:00  INFO 24452 --- [http-nio-8080-exec-6] c.novare.tredara.services.ItemService    : Item is saved in database
+2023-10-07T00:51:19.057+02:00  INFO 24452 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07T00:51:19.070+02:00  INFO 24452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-07T00:51:19.093+02:00  INFO 24452 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-07T01:14:10.197+02:00  INFO 2412 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 2412 (C:\Drive D\Alireza\Back end course\project 6\Tredara\target\classes started by aktoo in C:\Drive D\Alireza\Back end course\project 6\Tredara)
+2023-10-07T01:14:10.199+02:00  INFO 2412 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-07T01:14:10.866+02:00  INFO 2412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-07T01:14:10.928+02:00  INFO 2412 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+2023-10-07T01:14:11.504+02:00  INFO 2412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-07T01:14:11.524+02:00  INFO 2412 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-07T01:14:11.524+02:00  INFO 2412 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-07T01:14:11.593+02:00  INFO 2412 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-07T01:14:11.593+02:00  INFO 2412 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1354 ms
+2023-10-07T01:14:11.702+02:00  INFO 2412 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-07T01:14:11.771+02:00  INFO 2412 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-07T01:14:11.774+02:00  INFO 2412 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-07T01:14:11.883+02:00  INFO 2412 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T01:14:11.999+02:00  INFO 2412 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-07T01:14:12.015+02:00  INFO 2412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-07T01:14:12.281+02:00  INFO 2412 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d120d7c
+2023-10-07T01:14:12.282+02:00  INFO 2412 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-07T01:14:12.552+02:00  INFO 2412 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-07T01:14:13.130+02:00  INFO 2412 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-07T01:14:13.232+02:00  INFO 2412 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-07T01:14:13.663+02:00  WARN 2412 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-07T01:14:13.871+02:00  INFO 2412 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@59d7d574, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@94b5fe3, org.springframework.security.web.context.SecurityContextHolderFilter@7d466ef9, org.springframework.security.web.header.HeaderWriterFilter@2220c5f7, org.springframework.security.web.authentication.logout.LogoutFilter@6cee52e2, com.novare.tredara.security.jwt.AuthTokenFilter@7dc963be, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@601ca994, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5432be12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4417755b, org.springframework.security.web.session.SessionManagementFilter@542c6165, org.springframework.security.web.access.ExceptionTranslationFilter@978475b, org.springframework.security.web.access.intercept.AuthorizationFilter@4e23ddf0]
+2023-10-07T01:14:14.067+02:00  INFO 2412 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-07T01:14:14.073+02:00  INFO 2412 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 4.248 seconds (process running for 4.957)
+2023-10-07T01:18:23.789+02:00  INFO 2412 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-07T01:18:23.789+02:00  INFO 2412 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-07T01:18:23.819+02:00  INFO 2412 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2023-10-07T10:23:18.305+02:00  WARN 2412 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h29m35s240ms137µs100ns).
+2023-10-07T10:51:38.694+02:00  WARN 2412 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m50s317ms385µs400ns).
