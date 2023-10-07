@@ -39,7 +39,7 @@ public class ItemController {
     }
     @GetMapping("/latestItems")
     public ResponseEntity<List<ItemDTO>> getLatestItems()  {
-        return ResponseEntity.ok(this.itemService.getEndingSoonItems());
+        return ResponseEntity.ok(this.itemService.getLatestItems());
     }
 
     @GetMapping("/item/{itemId}")
