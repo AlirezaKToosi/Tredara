@@ -6,12 +6,10 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -22,6 +20,12 @@ public class ItemController {
     @Autowired
     public ItemController(ItemService itemService){
         this.itemService = itemService;
+    }
+
+    @GetMapping("/items/search")
+    public ResponseEntity<List<ItemDTO>> searchItemsByName(@RequestParam String title){
+        List<ItemDTO> items = this.itemService.findByTitle(title);
+        return ResponseEntity.ok(items);
     }
 
     @PostMapping("/item/create")

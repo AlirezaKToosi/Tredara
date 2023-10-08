@@ -16,7 +16,9 @@ import org.springframework.stereotype.Service;
 import javax.sql.rowset.serial.SerialBlob;
 import java.sql.Blob;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ItemService {
@@ -56,6 +58,11 @@ public class ItemService {
        savedtemDTO.setImageString(itemDTO.getImageString());
        return savedtemDTO;
 
+    }
+
+    public List<ItemDTO> findByTitle(String name) {
+        List<Item> items = itemRepo.findByTitleContainingIgnoreCase(name);
+        return items.stream().map(this::itemToDto).collect(Collectors.toList());
     }
 
     private Item dtoToItem(ItemDTO itemDTO) {
