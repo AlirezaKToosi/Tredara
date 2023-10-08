@@ -60,8 +60,8 @@ public class ItemService {
 
     }
 
-    public List<ItemDTO> findByTitle(String name) {
-        List<Item> items = itemRepo.findByTitleContainingIgnoreCase(name);
+    public List<ItemDTO> searchByNameAndDescription(String query) {
+        List<Item> items = itemRepo.searchByTitleOrDescriptionIgnoreCase(query);
         return items.stream().map(this::itemToDto).collect(Collectors.toList());
     }
 

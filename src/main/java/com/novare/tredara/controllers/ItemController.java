@@ -23,8 +23,8 @@ public class ItemController {
     }
 
     @GetMapping("/items/search")
-    public ResponseEntity<List<ItemDTO>> searchItemsByName(@RequestParam String title){
-        List<ItemDTO> items = this.itemService.findByTitle(title);
+    public ResponseEntity<List<ItemDTO>> searchItems(@RequestParam String query){
+        List<ItemDTO> items = this.itemService.searchByNameAndDescription(query);
         return ResponseEntity.ok(items);
     }
 
