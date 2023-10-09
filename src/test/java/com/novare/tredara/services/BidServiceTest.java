@@ -46,9 +46,16 @@ class BidServiceTest {
        bidService = new BidService(bidRepo,userRepo,itemRepo);
 
         User user = new User("rohit agarwal","aggarrohit@gmail.com","password");
-        Item item = new Item(null,"item title","item description",100,
-                new Date(),
-                getFutureTime(), EItemStatus.STATUS_OPEN,user,null,null);
+
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         Bid bid = new Bid();
         bid.setItem(item);
         bid.setUser(user);
@@ -73,9 +80,16 @@ class BidServiceTest {
     void getBidsByItemId_nonEmptyBids() {
         List<Bid> bidList = new ArrayList<>();
         User user = new User("rohit agarwal","aggarrohit@gmail.com","password");
-        Item item = new Item(null,"item title","item description",100,
-                new Date(),
-                getFutureTime(), EItemStatus.STATUS_OPEN,user,null,null);
+
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         Bid bid = new Bid();
         bid.setItem(item);
         bid.setUser(user);
@@ -97,10 +111,17 @@ class BidServiceTest {
     void addBid_shouldFailIfItemIdNotValid(){
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                                new Date(),getFutureTime(),
-                                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(1L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -114,10 +135,16 @@ class BidServiceTest {
     void addBid_shouldFailIfSellerIdEqualsUserId(){
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getFutureTime(),
-                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -134,10 +161,17 @@ class BidServiceTest {
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
         User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getFutureTime(),
-                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(1L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(1111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -155,10 +189,17 @@ class BidServiceTest {
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
         User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getFutureTime(),
-                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(11L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -177,10 +218,17 @@ class BidServiceTest {
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
         User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getFutureTime(),
-                EItemStatus.STATUS_CLOSE,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(11L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_CLOSE);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -199,10 +247,17 @@ class BidServiceTest {
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
         User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getFutureTime(),
-                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(11L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());
@@ -221,10 +276,17 @@ class BidServiceTest {
         BidDto bidDto = new BidDto();
         User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
         User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        Item item = new Item(11L,"item title","item description",111,
-                new Date(),getPastTime(),
-                EItemStatus.STATUS_OPEN,user,null,null);
-        //bidDto.setUserId(user.getId());
+
+        Item item = new Item();
+        item.setId(11L);
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(111);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getPastTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         bidDto.setBidTime(new Date());
         bidDto.setAmount(125);
         bidDto.setItemId(item.getId());

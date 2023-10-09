@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.Date;
 
+import static com.novare.tredara.Utils.getPastTime;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
@@ -32,9 +33,15 @@ class BidRepoTest {
         User user = new User("rohit agarwal","aggarrohit@gmail.com","password");
         savedUser = userRepo.save(user);
 
-        Item item = new Item(null,"item title","item description",100,
-                                new Date(),
-                                new Date(), EItemStatus.STATUS_OPEN,user,null,null);
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(new Date());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(user);
+
         savedItem = itemRepo.save(item);
 
         Bid bid = new Bid(null,1111,new Date(),user,item,null);

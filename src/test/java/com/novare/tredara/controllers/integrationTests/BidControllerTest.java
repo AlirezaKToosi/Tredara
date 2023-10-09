@@ -66,9 +66,15 @@ class BidControllerTest {
         User user2 = new User("rohit2","aggarrohit2@gmail.com","password");
         User savedUser2 = userRepo.save(user2);
 
-        Item item = new Item(null,"item title","item description",100,
-                new Date(),
-                getFutureTime(), EItemStatus.STATUS_OPEN,savedUser1,null,null);
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(savedUser1);
+
         savedItem = itemRepo.save(item);
     }
 
@@ -195,9 +201,15 @@ class BidControllerTest {
     @WithMockUser(username = "aggarrohit2@gmail.com")
     void createBid_shouldFailWhenItemIsNotActive() throws Exception {
 
-        Item item = new Item(null,"item title","item description",100,
-                new Date(),
-                getFutureTime(), EItemStatus.STATUS_CLOSE,savedUser1,null,null);
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getFutureTime());
+        item.setStatus(EItemStatus.STATUS_CLOSE);
+        item.setUser(savedUser1);
+
         savedItem = itemRepo.save(item);
 
         BidDto bidDto = new BidDto();
@@ -221,9 +233,15 @@ class BidControllerTest {
     @WithMockUser(username = "aggarrohit2@gmail.com")
     void createBid_shouldFailWhenItemEndDateIsPassed() throws Exception {
 
-        Item item = new Item(null,"item title","item description",100,
-                new Date(),
-                getPastTime(), EItemStatus.STATUS_OPEN,savedUser1,null,null);
+        Item item = new Item();
+        item.setTitle("item title");
+        item.setDescription("item description");
+        item.setStartPrice(100);
+        item.setStartDateTime(new Date());
+        item.setEndDateTime(getPastTime());
+        item.setStatus(EItemStatus.STATUS_OPEN);
+        item.setUser(savedUser1);
+
         savedItem = itemRepo.save(item);
 
         BidDto bidDto = new BidDto();
