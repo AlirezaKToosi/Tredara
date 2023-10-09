@@ -97,12 +97,13 @@ public class AuthController {
                 password);
         user.setRole(ERole.ROLE_CUSTOMER);
         final User createUser = userService.saveUser(user);
-
+        UserDetailsImpl userDetails=UserDetailsImpl.build(createUser);
+        ResponseCookie responseCookie=jwtUtils.generateJwtCookie(userDetails);
         UserInfoResponse response = new UserInfoResponse(createUser.getId(),
                 createUser.getEmail(),
                 createUser.getFullName(),
                 createUser.getRole().name());
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,responseCookie.toString()).body(response);
     }
 
     @PostMapping("/logout/")

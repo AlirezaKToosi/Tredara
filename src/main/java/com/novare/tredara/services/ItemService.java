@@ -2,6 +2,7 @@ package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
 import com.novare.tredara.models.Item;
+import com.novare.tredara.payloads.BidDto;
 import com.novare.tredara.payloads.ItemDTO;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.repositories.ItemRepo;
@@ -20,7 +21,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,13 +32,15 @@ public class ItemService {
     private ItemRepo itemRepo;
     private ModelMapper modelMapper;
     private UserRepo userRepo;
+    private BidService bidService;
 
     @Autowired
-    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
+    public ItemService(BidService bidService,ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.fileSystemStorageService = fileSystemStorageService;
+        this.bidService=bidService;
     }
 
     public ItemDTO createItem(ItemDTO itemDTO) {
@@ -72,14 +74,24 @@ public class ItemService {
         List<ItemDTO> itemDTOS = items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
         return itemDTOS;
     }
+
     @Transactional(readOnly = true)
     public ItemInfoDTO getItemInfo(Long itemId) throws SQLException {
         Item item = this.itemRepo.findById(itemId)
                 .orElseThrow(() -> new ResourceNotFoundException("Item", "id", itemId));
 
+
         ItemInfoDTO itemInfoDTO = new ItemInfoDTO();
         itemInfoDTO.setImageUrl(item.getImage_url());
         itemInfoDTO.setTitle(item.getTitle());
+        Double maxBid = bidService.getBidsByItemId(itemId)
+                .stream()
+                .mapToDouble(BidDto::getAmount)
+                .max()
+                .orElse(0);
+        itemInfoDTO.setLeadPrice(maxBid != 0
+                ? String.valueOf(Math.round(maxBid * 10) / 10)
+                : "no bid yet");
         itemInfoDTO.setStartPrice(item.getStartPrice());
         itemInfoDTO.setDescription(item.getDescription());
 
@@ -92,7 +104,7 @@ public class ItemService {
         return itemInfoDTO;
     }
 
-    public List<ItemDTO> getEndingSoonItems(){
+    public List<ItemDTO> getEndingSoonItems() {
         String sortBy = "endDateTime";
         Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
         Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
@@ -102,6 +114,7 @@ public class ItemService {
 
         return itemDTOS;
     }
+
     public List<ItemDTO> getLatestItems() {
 
         String sortBy = "startDateTime";
