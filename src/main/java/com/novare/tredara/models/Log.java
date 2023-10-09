@@ -13,7 +13,7 @@ public class Log {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "ACTION_TYPE")
-    private String actionType;
+    private EActionType actionType;
     @Column(name = "ACTION_DETAILS")
     private String actionDetails;
     @Column(name = "TIME_STAMP")
