@@ -33,7 +33,7 @@ public class ItemController {
         return ResponseEntity.ok(this.itemService.getAllItems());
     }
 
-    @GetMapping("/endinngSoonItems")
+    @GetMapping("/endingSoonItems")
     public ResponseEntity<List<ItemDTO>> getEndingSoonItems()  {
         return ResponseEntity.ok(this.itemService.getEndingSoonItems());
     }
