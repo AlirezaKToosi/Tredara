@@ -35,12 +35,12 @@ public class ItemService {
     private BidService bidService;
 
     @Autowired
-    public ItemService(BidService bidService,ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
+    public ItemService(BidService bidService, ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.fileSystemStorageService = fileSystemStorageService;
-        this.bidService=bidService;
+        this.bidService = bidService;
     }
 
     public ItemDTO createItem(ItemDTO itemDTO) {
@@ -79,7 +79,6 @@ public class ItemService {
     public ItemInfoDTO getItemInfo(Long itemId) throws SQLException {
         Item item = this.itemRepo.findById(itemId)
                 .orElseThrow(() -> new ResourceNotFoundException("Item", "id", itemId));
-
 
         ItemInfoDTO itemInfoDTO = new ItemInfoDTO();
         itemInfoDTO.setImageUrl(item.getImage_url());
