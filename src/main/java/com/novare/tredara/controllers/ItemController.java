@@ -22,6 +22,12 @@ public class ItemController {
         this.itemService = itemService;
     }
 
+    @GetMapping("/items/search")
+    public ResponseEntity<List<ItemDTO>> searchItems(@RequestParam String query){
+        List<ItemDTO> items = this.itemService.searchByNameAndDescription(query);
+        return ResponseEntity.ok(items);
+    }
+
     @PostMapping("/item/create")
     public ResponseEntity<ItemDTO> createItem(@Valid @RequestBody ItemDTO itemDTO) {
         ItemDTO createItemDto = this.itemService.createItem(itemDTO);

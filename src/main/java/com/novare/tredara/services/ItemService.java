@@ -90,6 +90,12 @@ public class ItemService {
         return itemDTOS;
     }
 
+
+    public List<ItemDTO> searchByNameAndDescription(String query) {
+        List<Item> items = itemRepo.searchByTitleOrDescriptionIgnoreCase(query);
+        return items.stream().map(this::itemToDto).collect(Collectors.toList());
+    }
+
     private Item dtoToItem(ItemDTO itemDTO) {
         Item item = this.modelMapper.map(itemDTO, Item.class);
         return item;
