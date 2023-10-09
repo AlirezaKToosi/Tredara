@@ -9,8 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.Date;
-
 @SpringBootApplication
 public class TredaraApplication implements CommandLineRunner{
 
@@ -33,7 +31,6 @@ public class TredaraApplication implements CommandLineRunner{
             user1.setEmail("abc@gmail.com");
             user1.setFullName("ABC DER");
             user1.setPassword("abc");
-           // userRepo.save(user1);
 
         } catch (Exception e) {
             e.printStackTrace();

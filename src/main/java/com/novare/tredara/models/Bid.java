@@ -1,14 +1,19 @@
 package com.novare.tredara.models;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
-@Entity
+@Entity(name = "bid")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Table(name = "bid")
@@ -21,11 +26,11 @@ public class Bid {
     @Column(name = "BID_TIME")
     private Date bidTime;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "USER_ID")
     private User user;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ITEM_ID")
     private Item item;
     @OneToMany(mappedBy = "bid")
