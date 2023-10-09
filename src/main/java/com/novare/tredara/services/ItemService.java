@@ -1,9 +1,12 @@
 package com.novare.tredara.services;
 
+import com.novare.tredara.exceptions.ResourceNotFoundException;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.payloads.ItemDTO;
+import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.repositories.ItemRepo;
 import com.novare.tredara.repositories.UserRepo;
+import com.novare.tredara.utils.DateUtils;
 import com.novare.tredara.utils.FileUtil;
 import lombok.extern.log4j.Log4j2;
 import org.apache.tomcat.util.codec.binary.Base64;
@@ -14,8 +17,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -67,6 +72,25 @@ public class ItemService {
         List<ItemDTO> itemDTOS = items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
         return itemDTOS;
     }
+    @Transactional(readOnly = true)
+    public ItemInfoDTO getItemInfo(Long itemId) throws SQLException {
+        Item item = this.itemRepo.findById(itemId)
+                .orElseThrow(() -> new ResourceNotFoundException("Item", "id", itemId));
+
+        ItemInfoDTO itemInfoDTO = new ItemInfoDTO();
+        itemInfoDTO.setImageUrl(item.getImage_url());
+        itemInfoDTO.setTitle(item.getTitle());
+        itemInfoDTO.setStartPrice(item.getStartPrice());
+        itemInfoDTO.setDescription(item.getDescription());
+
+        String timeToBidEnd = DateUtils.getTimeToBidEnd(item.getEndDateTime());
+        itemInfoDTO.setTimeToBidEnd(timeToBidEnd);
+
+        int numberOfBids = item.getBids().size();
+        itemInfoDTO.setNumberOfBids(numberOfBids);
+
+        return itemInfoDTO;
+    }
 
     public List<ItemDTO> getEndingSoonItems(){
         String sortBy = "endDateTime";
@@ -90,6 +114,12 @@ public class ItemService {
         return itemDTOS;
     }
 
+
+    public List<ItemDTO> searchByNameAndDescription(String query) {
+        List<Item> items = itemRepo.searchByTitleOrDescriptionIgnoreCase(query);
+        return items.stream().map(this::itemToDto).collect(Collectors.toList());
+    }
+
     private Item dtoToItem(ItemDTO itemDTO) {
         Item item = this.modelMapper.map(itemDTO, Item.class);
         return item;
@@ -102,3 +132,5 @@ public class ItemService {
 
 
 }
+
+
