@@ -1,13 +1,16 @@
 package com.novare.tredara.controllers;
 
 import com.novare.tredara.models.ERole;
+import com.novare.tredara.models.Log;
 import com.novare.tredara.models.User;
 import com.novare.tredara.payloads.InfoResponse;
 import com.novare.tredara.payloads.LoginRequest;
 import com.novare.tredara.payloads.SignupRequest;
 import com.novare.tredara.payloads.UserInfoResponse;
+import com.novare.tredara.repositories.UserRepo;
 import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.security.userdetails.UserDetailsImpl;
+import com.novare.tredara.services.LogService;
 import com.novare.tredara.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -34,6 +39,9 @@ public class AuthController {
     JwtTokenUtil jwtUtils;
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private LogService logService;
 
     @PostMapping("/login/")
     public ResponseEntity<?> authenticateUser(@RequestBody @Valid LoginRequest loginRequest) {
@@ -60,9 +68,13 @@ public class AuthController {
                 default -> throw new IllegalArgumentException("Unexpected value: " + role);
             };
             response.setType(userType);
+            // Log successful login
+            logService.logSuccessfulLogin(loginRequest.getEmail());
+
             return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, jwtCookie.toString()).body(response);
         } catch (AuthenticationException e) {
-            // Authentication failed
+            // Authentication failed Log successful login
+            logService.logFailedLogin(loginRequest.getEmail());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED) // 401 Unauthorized
                     .body("Authentication failed: " + e.getMessage());
         }

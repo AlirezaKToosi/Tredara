@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
     @Autowired
@@ -23,7 +25,12 @@ public class UserService {
         user.setPassword(encodePassword(user.getPassword()));
         return userRepo.save(user);
     }
-
+    public Optional<User> findById(Long id) {
+        return userRepo.findById(id);
+    }
+    public Optional<User> findByEmail(String email) {
+        return userRepo.findByEmail(email);
+    }
     public boolean existsByEmail(String email) {
         return userRepo.existsByEmail(email);
     }
