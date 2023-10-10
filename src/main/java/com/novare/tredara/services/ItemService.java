@@ -17,10 +17,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -105,11 +107,16 @@ public class ItemService {
 
     public List<ItemDTO> getEndingSoonItems() {
         String sortBy = "endDateTime";
+        // Get the current date and time
+        Date currentDate = new Date();
+        // Create a custom Specification to filter items with endDateTime greater than current time
+        Specification<Item> spec = (root, query, cb) ->
+                cb.greaterThan(root.get("endDateTime"), currentDate);
         Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
-        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+        Page<Item> endingSoonItems = this.itemRepo.findAll(spec, pageable);
 
 
-        List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
+        List<ItemDTO> itemDTOS = endingSoonItems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
 
         return itemDTOS;
     }
@@ -117,8 +124,12 @@ public class ItemService {
     public List<ItemDTO> getLatestItems() {
 
         String sortBy = "startDateTime";
+        Date currentDate = new Date();
+        // Create a custom Specification to filter items with endDateTime greater than current time
+        Specification<Item> spec = (root, query, cb) ->
+                cb.greaterThan(root.get("endDateTime"), currentDate);
         Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
-        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+        Page<Item> endingSoonitems = this.itemRepo.findAll(spec,pageable);
 
 
         List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
