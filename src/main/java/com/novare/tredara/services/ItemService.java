@@ -134,10 +134,10 @@ public class ItemService {
         return items.stream().map(this::itemToDto).collect(Collectors.toList());
     }
 
-    public List<ItemDTO> getItemsWonByUser(Long userId) {
-        List<Item> items = itemRepo.findItemsWonByUser(userId);
-        return items.stream().map(this::itemToDto).collect(Collectors.toList());
-    }
+//    public List<ItemDTO> getItemsWonByUser(Long userId) {
+//        List<Item> items = itemRepo.findItemsWonByUser(userId);
+//        return items.stream().map(this::itemToDto).collect(Collectors.toList());
+//    }
 
 
     private Item dtoToItem(ItemDTO itemDTO) {

@@ -15,11 +15,12 @@ public interface ItemRepo extends JpaRepository<Item, Long> {
 
     @Query("SELECT i FROM Item i WHERE i.user.id = :userId")
     List<Item> findByUserId(@Param("userId") Long userId);
-    @Query("SELECT DISTINCT b.item FROM Bid b WHERE b.user.id = :userId")
+
+    @Query("SELECT DISTINCT i FROM Item i JOIN i.bids b WHERE b.user.id = :userId")
     List<Item> findItemsByBidsUserId(@Param("userId") Long userId);
 
-    @Query("SELECT DISTINCT b.item FROM Bid b WHERE b.user.id = :userId AND b.winner = true")
-    List<Item> findItemsWonByUser(@Param("userId") Long userId);
+//    @Query("SELECT DISTINCT b.item FROM Bid b WHERE b.user.id = :userId AND b.winner = true")
+//    List<Item> findItemsWonByUser(@Param("userId") Long userId);
 
 }
 
