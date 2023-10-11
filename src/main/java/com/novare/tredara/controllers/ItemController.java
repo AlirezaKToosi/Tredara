@@ -1,5 +1,6 @@
 package com.novare.tredara.controllers;
 
+import com.novare.tredara.exceptions.ResourceNotFoundException;
 import com.novare.tredara.payloads.ItemDTO;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.services.ItemService;
@@ -44,6 +45,7 @@ public class ItemController {
     public ResponseEntity<List<ItemDTO>> getEndingSoonItems()  {
         return ResponseEntity.ok(this.itemService.getEndingSoonItems());
     }
+
     @GetMapping("/latestItems")
     public ResponseEntity<List<ItemDTO>> getLatestItems()  {
         return ResponseEntity.ok(this.itemService.getLatestItems());
@@ -57,4 +59,33 @@ public class ItemController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    @GetMapping("/items/createdByUser/{userId}")
+    public ResponseEntity<List<ItemDTO>> getItemsCreatedByUser(@PathVariable Long userId) {
+        try {
+            List<ItemDTO> items = this.itemService.getItemsCreatedByUser(userId);
+            return ResponseEntity.ok(items);
+        }
+        catch(ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        catch(Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/items/bidedByUser/{userId}")
+    public ResponseEntity<List<ItemDTO>> getItemsBidedByUser(@PathVariable Long userId) {
+        try {
+            List<ItemDTO> items = this.itemService.getItemsByUserBids(userId);
+            return ResponseEntity.ok(items);
+        }
+        catch(ResourceNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        catch(Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }
+
