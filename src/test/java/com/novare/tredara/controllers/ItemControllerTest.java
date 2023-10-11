@@ -1,7 +1,9 @@
 package com.novare.tredara.controllers;
 
 import com.novare.tredara.payloads.ItemInfoDTO;
+import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.services.ItemService;
+import com.novare.tredara.services.LogService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -18,13 +20,14 @@ import static org.mockito.Mockito.when;
 class ItemControllerTest {
     @Mock
     private ItemService itemService;
-
+    @Mock
+    private JwtTokenUtil jwtTokenUtil;
     private ItemController itemController;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        itemController = new ItemController(itemService);
+        itemController = new ItemController(itemService,jwtTokenUtil);
     }
 
     @Test

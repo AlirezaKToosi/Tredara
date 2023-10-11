@@ -22,13 +22,15 @@ class ItemServiceTest {
     ItemRepo itemRepo;
     @Mock
     BidService bidService;
+    @Mock
+    LogService logService;
 
     ItemService itemService;
 
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        itemService = new ItemService(bidService, itemRepo, null, null, null);
+        itemService = new ItemService(bidService,logService, itemRepo, null, null, null);
     }
 
     @Test

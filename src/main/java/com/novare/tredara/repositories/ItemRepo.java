@@ -13,4 +13,5 @@ import java.util.List;
 public interface ItemRepo extends JpaRepository<Item, Long> , JpaSpecificationExecutor<Item> {
     @Query("SELECT i FROM Item i WHERE LOWER(i.title) LIKE %:query% OR LOWER(i.description) LIKE %:query%")
     List<Item> searchByTitleOrDescriptionIgnoreCase(@Param("query") String query);
+
 }

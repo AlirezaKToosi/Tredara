@@ -1,6 +1,7 @@
 package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
+import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.payloads.BidDto;
 import com.novare.tredara.payloads.ItemDTO;
@@ -35,17 +36,19 @@ public class ItemService {
     private ModelMapper modelMapper;
     private UserRepo userRepo;
     private BidService bidService;
+    private LogService logService;
 
     @Autowired
-    public ItemService(BidService bidService, ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
+    public ItemService(BidService bidService, LogService logService, ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.fileSystemStorageService = fileSystemStorageService;
         this.bidService = bidService;
+        this.logService=logService;
     }
 
-    public ItemDTO createItem(ItemDTO itemDTO) {
+    public ItemDTO createItem(ItemDTO itemDTO, String username) {
         String logMessage;
 
         if (itemDTO.getImage_url() != null) {
@@ -68,6 +71,8 @@ public class ItemService {
         Item savedItem = this.itemRepo.save(item);
         logMessage = "Item is saved in database";
         log.info(logMessage);
+        // Log the resource access with the username
+        logService.logResourceAccess(EActionType.CREATE_ITEM, username, savedItem.getId());
         return this.itemToDto(savedItem);
     }
 

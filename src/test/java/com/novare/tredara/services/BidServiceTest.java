@@ -36,14 +36,16 @@ class BidServiceTest {
     @Mock
     ItemRepo itemRepo;
 
+    @Mock
+    LogService logService;
     BidService bidService;
 
     AutoCloseable autoCloseable;
 
     @BeforeEach
     void setUp(){
-       autoCloseable = MockitoAnnotations.openMocks(this);
-       bidService = new BidService(bidRepo,userRepo,itemRepo);
+        autoCloseable = MockitoAnnotations.openMocks(this);
+        bidService = new BidService(bidRepo,userRepo,itemRepo,logService);
 
         User user = new User("rohit agarwal","aggarrohit@gmail.com","password");
 
@@ -59,7 +61,7 @@ class BidServiceTest {
         Bid bid = new Bid();
         bid.setItem(item);
         bid.setUser(user);
-       when(bidRepo.save(any())).thenReturn(bid);
+        when(bidRepo.save(any())).thenReturn(bid);
     }
 
 
