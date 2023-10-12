@@ -148,6 +148,26 @@ public class ItemService {
         return items.stream().map(this::itemToDto).collect(Collectors.toList());
     }
 
+    public List<ItemDTO> getItemsCreatedByUser(Long userId) {
+        userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
+
+        List<Item> items = this.itemRepo.findByUserId(userId);
+        return  items.stream().map(this::itemToDto).collect(Collectors.toList());
+    }
+
+    public List<ItemDTO> getItemsByUserBids(Long userId) {
+        userRepo.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
+
+        List<Item> items = itemRepo.findItemsByBidsUserId(userId);
+        return items.stream().map(this::itemToDto).collect(Collectors.toList());
+    }
+
+//    public List<ItemDTO> getItemsWonByUser(Long userId) {
+//        List<Item> items = itemRepo.findItemsWonByUser(userId);
+//        return items.stream().map(this::itemToDto).collect(Collectors.toList());
+//    }
+
+
     private Item dtoToItem(ItemDTO itemDTO) {
         Item item = this.modelMapper.map(itemDTO, Item.class);
         return item;
@@ -157,7 +177,6 @@ public class ItemService {
         ItemDTO itemDTO = this.modelMapper.map(item, ItemDTO.class);
         return itemDTO;
     }
-
 
 }
 
