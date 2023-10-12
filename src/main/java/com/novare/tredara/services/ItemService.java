@@ -1,7 +1,9 @@
 package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
+import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.Item;
+import com.novare.tredara.payloads.BidDto;
 import com.novare.tredara.payloads.ItemDTO;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.repositories.ItemRepo;
@@ -16,6 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,16 +35,20 @@ public class ItemService {
     private ItemRepo itemRepo;
     private ModelMapper modelMapper;
     private UserRepo userRepo;
+    private BidService bidService;
+    private LogService logService;
 
     @Autowired
-    public ItemService(ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
+    public ItemService(BidService bidService, LogService logService, ItemRepo itemRepo, ModelMapper modelMapper, UserRepo userRepo, FileSystemStorageService fileSystemStorageService) {
         this.itemRepo = itemRepo;
         this.modelMapper = modelMapper;
         this.userRepo = userRepo;
         this.fileSystemStorageService = fileSystemStorageService;
+        this.bidService = bidService;
+        this.logService=logService;
     }
 
-    public ItemDTO createItem(ItemDTO itemDTO) {
+    public ItemDTO createItem(ItemDTO itemDTO, String username) {
         String logMessage;
 
         if (itemDTO.getImage_url() != null) {
@@ -64,6 +71,8 @@ public class ItemService {
         Item savedItem = this.itemRepo.save(item);
         logMessage = "Item is saved in database";
         log.info(logMessage);
+        // Log the resource access with the username
+        logService.logResourceAccess(EActionType.CREATE_ITEM, username, savedItem.getId());
         return this.itemToDto(savedItem);
     }
 
@@ -72,6 +81,7 @@ public class ItemService {
         List<ItemDTO> itemDTOS = items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
         return itemDTOS;
     }
+
     @Transactional(readOnly = true)
     public ItemInfoDTO getItemInfo(Long itemId) throws SQLException {
         Item item = this.itemRepo.findById(itemId)
@@ -80,6 +90,14 @@ public class ItemService {
         ItemInfoDTO itemInfoDTO = new ItemInfoDTO();
         itemInfoDTO.setImageUrl(item.getImage_url());
         itemInfoDTO.setTitle(item.getTitle());
+        Double maxBid = bidService.getBidsByItemId(itemId)
+                .stream()
+                .mapToDouble(BidDto::getAmount)
+                .max()
+                .orElse(0);
+        itemInfoDTO.setLeadPrice(maxBid != 0
+                ? String.valueOf(Math.round(maxBid * 10) / 10)
+                : "no bid yet");
         itemInfoDTO.setStartPrice(item.getStartPrice());
         itemInfoDTO.setDescription(item.getDescription());
 
@@ -92,21 +110,31 @@ public class ItemService {
         return itemInfoDTO;
     }
 
-    public List<ItemDTO> getEndingSoonItems(){
+    public List<ItemDTO> getEndingSoonItems() {
         String sortBy = "endDateTime";
+        // Get the current date and time
+        Date currentDate = new Date();
+        // Create a custom Specification to filter items with endDateTime greater than current time
+        Specification<Item> spec = (root, query, cb) ->
+                cb.greaterThan(root.get("endDateTime"), currentDate);
         Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
-        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+        Page<Item> endingSoonItems = this.itemRepo.findAll(spec, pageable);
 
 
-        List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
+        List<ItemDTO> itemDTOS = endingSoonItems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
 
         return itemDTOS;
     }
+
     public List<ItemDTO> getLatestItems() {
 
         String sortBy = "startDateTime";
+        Date currentDate = new Date();
+        // Create a custom Specification to filter items with endDateTime greater than current time
+        Specification<Item> spec = (root, query, cb) ->
+                cb.greaterThan(root.get("endDateTime"), currentDate);
         Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
-        Page<Item> endingSoonitems = this.itemRepo.findAll(pageable);
+        Page<Item> endingSoonitems = this.itemRepo.findAll(spec,pageable);
 
 
         List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());

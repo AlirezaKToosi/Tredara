@@ -11,11 +11,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.security.Principal;
-import java.time.LocalDateTime;
 import java.util.*;
 
 import static com.novare.tredara.Utils.getFutureTime;
@@ -36,14 +33,16 @@ class BidServiceTest {
     @Mock
     ItemRepo itemRepo;
 
+    @Mock
+    LogService logService;
     BidService bidService;
 
     AutoCloseable autoCloseable;
 
     @BeforeEach
     void setUp(){
-       autoCloseable = MockitoAnnotations.openMocks(this);
-       bidService = new BidService(bidRepo,userRepo,itemRepo);
+        autoCloseable = MockitoAnnotations.openMocks(this);
+        bidService = new BidService(bidRepo,userRepo,itemRepo,logService);
 
         User user = new User("rohit agarwal","aggarrohit@gmail.com","password");
 
@@ -59,7 +58,7 @@ class BidServiceTest {
         Bid bid = new Bid();
         bid.setItem(item);
         bid.setUser(user);
-       when(bidRepo.save(any())).thenReturn(bid);
+        when(bidRepo.save(any())).thenReturn(bid);
     }
 
 

@@ -2,10 +2,7 @@ package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.BadRequestException;
 import com.novare.tredara.exceptions.ResourceNotFoundException;
-import com.novare.tredara.models.Bid;
-import com.novare.tredara.models.EItemStatus;
-import com.novare.tredara.models.Item;
-import com.novare.tredara.models.User;
+import com.novare.tredara.models.*;
 import com.novare.tredara.payloads.BidDto;
 import com.novare.tredara.repositories.BidRepo;
 import com.novare.tredara.repositories.ItemRepo;
@@ -24,12 +21,14 @@ public class BidService {
     BidRepo bidRepo;
     UserRepo userRepo;
     ItemRepo itemRepo;
+    LogService logService;
 
     @Autowired
-    public BidService(BidRepo bidRepo,UserRepo userRepo,ItemRepo itemRepo) {
+    public BidService(BidRepo bidRepo,UserRepo userRepo,ItemRepo itemRepo,LogService logService) {
         this.bidRepo = bidRepo;
         this.userRepo = userRepo;
         this.itemRepo = itemRepo;
+        this.logService=logService;
     }
 
     public List<BidDto> getBidsByItemId(Long itemId){
@@ -45,7 +44,8 @@ public class BidService {
         Bid bid = toBid(bidDto,principal);
 
         if(getCurrentHighestBid(item)>=bidDto.getAmount()) throw new BadRequestException("bid should be greater than the current highest bid");
-
+        // Log the resource access
+        logService.logResourceAccess(EActionType.CREATE_BID, principal.getName(), item.getId());
         return toBidDto(bidRepo.save(bid));
     }
 
