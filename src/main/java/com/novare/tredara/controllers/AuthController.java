@@ -1,13 +1,11 @@
 package com.novare.tredara.controllers;
 
 import com.novare.tredara.models.ERole;
-import com.novare.tredara.models.Log;
 import com.novare.tredara.models.User;
 import com.novare.tredara.payloads.InfoResponse;
 import com.novare.tredara.payloads.LoginRequest;
 import com.novare.tredara.payloads.SignupRequest;
 import com.novare.tredara.payloads.UserInfoResponse;
-import com.novare.tredara.repositories.UserRepo;
 import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.security.userdetails.UserDetailsImpl;
 import com.novare.tredara.services.LogService;
@@ -24,8 +22,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Date;
 
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -97,12 +93,13 @@ public class AuthController {
                 password);
         user.setRole(ERole.ROLE_CUSTOMER);
         final User createUser = userService.saveUser(user);
-
+        UserDetailsImpl userDetails=UserDetailsImpl.build(createUser);
+        ResponseCookie responseCookie=jwtUtils.generateJwtCookie(userDetails);
         UserInfoResponse response = new UserInfoResponse(createUser.getId(),
                 createUser.getEmail(),
                 createUser.getFullName(),
                 createUser.getRole().name());
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,responseCookie.toString()).body(response);
     }
 
     @PostMapping("/logout/")
