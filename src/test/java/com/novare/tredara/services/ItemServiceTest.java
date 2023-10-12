@@ -1,6 +1,5 @@
 package com.novare.tredara.services;
 
-import com.novare.tredara.controllers.ItemController;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.repositories.ItemRepo;

@@ -1,12 +1,9 @@
 package com.novare.tredara.controllers;
 
-import com.novare.tredara.models.EActionType;
 import com.novare.tredara.payloads.ItemDTO;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.services.ItemService;
-import com.novare.tredara.services.LogService;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,5 @@
 package com.novare.tredara.payloads;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
