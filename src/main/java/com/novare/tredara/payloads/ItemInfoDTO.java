@@ -1,6 +1,5 @@
 package com.novare.tredara.payloads;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +10,7 @@ public class ItemInfoDTO {
     private String title;
     private String description;
     private double startPrice;
+    private String leadPrice;
     private String timeToBidEnd;
     private int numberOfBids;
 }

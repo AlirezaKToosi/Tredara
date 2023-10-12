@@ -21,5 +21,9 @@ public class Log {
     @ManyToOne
     @JoinColumn(name = "USER_ID")
     private User user;
+    @ManyToOne
+    @JoinColumn(name = "ITEM_ID")
+    private Item item;
+
 
 }

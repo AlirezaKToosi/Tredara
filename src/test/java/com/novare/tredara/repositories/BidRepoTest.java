@@ -8,7 +8,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.Date;
 
-import static com.novare.tredara.Utils.getPastTime;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest

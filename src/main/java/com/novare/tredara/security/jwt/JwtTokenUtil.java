@@ -36,7 +36,17 @@ public class JwtTokenUtil {
             return null;
         }
     }
-
+    public String getUsernameFromRequest(HttpServletRequest request) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (jwtCookie.equals(cookie.getName())) {
+                    return getUserNameFromJwtToken(cookie.getValue());
+                }
+            }
+        }
+        return null;
+    }
     public ResponseCookie generateJwtCookie(UserDetailsImpl userPrincipal) {
         String jwt = generateTokenFromUsername(userPrincipal.getUsername());
         return ResponseCookie.from(jwtCookie, jwt).path("/api/v1").maxAge(24 * 60 * 60).httpOnly(true).build();
