@@ -14,6 +14,9 @@ public interface ItemRepo extends JpaRepository<Item, Long> , JpaSpecificationEx
     @Query("SELECT i FROM Item i WHERE LOWER(i.title) LIKE %:query% OR LOWER(i.description) LIKE %:query%")
     List<Item> searchByTitleOrDescriptionIgnoreCase(@Param("query") String query);
 
+    @Query("SELECT i FROM Item i WHERE i.status = 0 AND i.endDateTime < CURRENT_TIMESTAMP")
+    List<Item> serchByEndDateTimeAndOpenStatus();
+
     @Query("SELECT i FROM Item i WHERE i.user.id = :userId")
     List<Item> findByUserId(@Param("userId") Long userId);
 
