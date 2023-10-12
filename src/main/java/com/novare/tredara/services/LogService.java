@@ -1,13 +1,10 @@
 package com.novare.tredara.services;
 
 import com.novare.tredara.models.EActionType;
-import com.novare.tredara.models.Item;
 import com.novare.tredara.models.Log;
 import com.novare.tredara.payloads.LogDTO;
 import com.novare.tredara.repositories.ItemRepo;
 import com.novare.tredara.repositories.LogRepository;
-import com.novare.tredara.security.userdetails.UserDetailsImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -15,12 +12,15 @@ import java.util.List;
 
 @Service
 public class LogService {
-    @Autowired
-    private LogRepository logRepository;
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private ItemRepo itemRepo;
+    private final LogRepository logRepository;
+    private final UserService userService;
+    private final ItemRepo itemRepo;
+
+    public LogService(LogRepository logRepository, UserService userService, ItemRepo itemRepo) {
+        this.logRepository = logRepository;
+        this.userService = userService;
+        this.itemRepo = itemRepo;
+    }
 
     public void saveLog(Log log) {
         logRepository.save(log);
@@ -52,13 +52,37 @@ public class LogService {
         Log log = new Log();
         log.setActionType(action);
         log.setItem(itemRepo.findById(item).orElse(null));
-        if(action.getActionTypeId()==3)
-        log.setActionDetails("User Created new item with email: " + userName + " and for item:" + item);
-        else if(action.getActionTypeId()==4)
-        log.setActionDetails("User Added new bid with email: " + userName + " and for item:" + item);
+        if (action.getActionTypeId() == 3)
+            log.setActionDetails("User Created new item with email: " + userName + " and for item:" + item);
+        else if (action.getActionTypeId() == 4)
+            log.setActionDetails("User Added new bid with email: " + userName + " and for item:" + item);
         log.setUser(userService.findByEmail(userName).orElse(null));
         log.setTimestamp(new Date());
         saveLog(log);
+    }
+
+    public List<LogDTO> getFilteredLogHistory(LogDTO request) {
+        return this.getLogHistory()
+                .stream()
+                .map(this::convertToLogDTO)
+                .filter(dto -> {
+                    if (request.getFilterStartInterval() != null && request.getFilterEndInterval() != null) {
+                        return dto.getTimestamp().after(request.getFilterStartInterval())
+                                && dto.getTimestamp().before(request.getFilterEndInterval());
+                    } else if (request.getFilterStartInterval() != null) {
+                        return dto.getTimestamp().after(request.getFilterStartInterval());
+                    } else if (request.getFilterEndInterval() != null) {
+                        return dto.getTimestamp().before(request.getFilterEndInterval());
+                    }
+                    return true;
+                })
+                .filter(dto -> {
+                    if (request.getActionType() != null) {
+                        return dto.getActionType().equalsIgnoreCase(request.getActionType());
+                    }
+                    return true;
+                })
+                .toList();
     }
 
     public LogDTO convertToLogDTO(Log log) {

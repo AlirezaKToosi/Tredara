@@ -13,5 +13,8 @@ public class LogDTO {
     private String actionType;
     private String actionDetails;
     private Date timestamp;
+    private Date filterStartInterval;
+    private Date filterEndInterval;
+    private Integer filterActionType;
     private Long userId;
 }
