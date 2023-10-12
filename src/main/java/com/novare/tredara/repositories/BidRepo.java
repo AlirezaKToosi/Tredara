@@ -12,6 +12,8 @@ public interface BidRepo extends JpaRepository<Bid, Long> {
 
     List<Bid> findByItemIdOrderByAmountDesc(Long itemId);
 
+    List<Bid> findByItemId(Long itemId);
+
     @Query("SELECT MAX(b.amount) FROM bid b WHERE b.item.id = :itemId")
     Double getCurrentHighestBid(Long itemId);
 

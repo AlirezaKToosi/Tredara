@@ -33,5 +33,6 @@ build/
 .vscode/
 
 ### Logs and Images ###
-/logs/*
+/logs/
+/logs/**
 /images/*
