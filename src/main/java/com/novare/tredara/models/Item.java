@@ -49,6 +49,8 @@ public class Item {
 
     @OneToMany(mappedBy = "item")
     private List<Bid> bids;
+    @OneToMany(mappedBy = "item")
+    private List<Log> logs;
 
     @OneToMany(mappedBy = "item")
     private List<Notification> notifications;
