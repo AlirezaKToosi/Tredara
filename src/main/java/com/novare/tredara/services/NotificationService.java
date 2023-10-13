@@ -1,6 +1,7 @@
 package com.novare.tredara.services;
 
 import com.novare.tredara.models.*;
+import com.novare.tredara.payloads.ItemDTO;
 import com.novare.tredara.payloads.LogDTO;
 import com.novare.tredara.payloads.NotificationDTO;
 import com.novare.tredara.repositories.NotificationRepo;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class NotificationService {
@@ -33,7 +35,14 @@ public class NotificationService {
         notificationRepo.save(notification);
         return notification;
     }
-
+    public List<ItemDTO> getWonItemsForUser(Long userId) {
+        return getNotificationHistory()
+                .stream()
+                .filter(notification -> notification.getUser() != null && notification.getUser().getId().equals(userId))
+                .filter(notification -> notification.getStatus() == ENotificationStatus.STATUS_SENT)
+                .map(notification -> convertToItemDTO(notification.getItem()))
+                .collect(Collectors.toList());
+    }
     public void markNotificationAsSent(Notification notification) {
         notification.setStatus(ENotificationStatus.STATUS_SENT);
         notificationRepo.save(notification);
@@ -95,5 +104,18 @@ public class NotificationService {
         }
 
         return notificationDTO;
+    }
+    public ItemDTO convertToItemDTO(Item item) {
+        ItemDTO itemDTO = new ItemDTO();
+        itemDTO.setId(item.getId());
+        itemDTO.setTitle(item.getTitle());
+        itemDTO.setDescription(item.getDescription());
+        itemDTO.setStartPrice(item.getStartPrice());
+        itemDTO.setStartDateTime(item.getStartDateTime());
+        itemDTO.setEndDateTime(item.getEndDateTime());
+        itemDTO.setStatus(item.getStatus());
+        itemDTO.setUserID(item.getUser().getId());
+        itemDTO.setImage_url(item.getImage_url());
+        return itemDTO;
     }
 }
