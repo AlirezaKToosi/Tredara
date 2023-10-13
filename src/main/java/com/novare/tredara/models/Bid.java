@@ -17,22 +17,23 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name = "bid")
-public class Bid {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "AMOUNT")
-    private double amount;
-    @Column(name = "BID_TIME")
-    private Date bidTime;
+    public class Bid {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
+        @Column(name = "AMOUNT")
+        private double amount;
+        @Column(name = "BID_TIME")
+        private Date bidTime;
 
-    @ManyToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "USER_ID")
-    private User user;
 
-    @ManyToOne(cascade = CascadeType.DETACH)
-    @JoinColumn(name = "ITEM_ID")
-    private Item item;
-    @OneToMany(mappedBy = "bid")
-    private List<Notification> notifications;
-}
+        @ManyToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "USER_ID")
+        private User user;
+
+        @ManyToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "ITEM_ID")
+        private Item item;
+        @OneToMany(mappedBy = "bid")
+        private List<Notification> notifications;
+    }

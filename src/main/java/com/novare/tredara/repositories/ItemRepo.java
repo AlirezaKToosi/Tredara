@@ -14,6 +14,8 @@ public interface ItemRepo extends JpaRepository<Item, Long> , JpaSpecificationEx
     @Query("SELECT i FROM Item i WHERE LOWER(i.title) LIKE %:query% OR LOWER(i.description) LIKE %:query%")
     List<Item> searchByTitleOrDescriptionIgnoreCase(@Param("query") String query);
 
+    @Query("SELECT i FROM Item i WHERE i.status = 0 AND i.endDateTime < CURRENT_TIMESTAMP")
+    List<Item> serchByEndDateTimeAndOpenStatus();
 
     @Query("SELECT i FROM Item i WHERE i.user.id = :userId")
     List<Item> findByUserId(@Param("userId") Long userId);
@@ -21,8 +23,5 @@ public interface ItemRepo extends JpaRepository<Item, Long> , JpaSpecificationEx
     @Query("SELECT DISTINCT i FROM Item i JOIN i.bids b WHERE b.user.id = :userId")
     List<Item> findItemsByBidsUserId(@Param("userId") Long userId);
 
-//    @Query("SELECT DISTINCT b.item FROM Bid b WHERE b.user.id = :userId AND b.winner = true")
-//    List<Item> findItemsWonByUser(@Param("userId") Long userId);
 
 }
-
