@@ -4,6 +4,7 @@ import com.novare.tredara.security.jwt.AuthEntryPointJwt;
 import com.novare.tredara.security.jwt.AuthTokenFilter;
 import com.novare.tredara.security.userdetails.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -23,6 +24,9 @@ import org.springframework.web.filter.CorsFilter;
 @EnableMethodSecurity
 
 public class WebSecurityConfig {
+
+    @Value("${cors.allowed-origin}")
+    private String allowedOrigin;
     @Autowired
     UserDetailsServiceImpl userDetailsService;
 
@@ -74,7 +78,7 @@ public class WebSecurityConfig {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfig = new CorsConfiguration();
         corsConfig.setAllowCredentials(true);// Allow cookies to be sent
-        corsConfig.addAllowedOrigin("http://localhost:5173/"); // Allow all origins
+        corsConfig.addAllowedOrigin(allowedOrigin); // Allow all origins
         corsConfig.addAllowedMethod("*"); // Allow all HTTP methods
         corsConfig.addAllowedHeader("*"); // Allow all headers
 

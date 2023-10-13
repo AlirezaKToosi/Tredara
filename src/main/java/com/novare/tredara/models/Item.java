@@ -43,15 +43,15 @@ public class Item {
     @Column(name = "IMAGE_URL")
     private String image_url;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "SELLER_USER_ID")
     private User user;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item",cascade = CascadeType.ALL)
     private List<Bid> bids;
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item",cascade = CascadeType.ALL)
     private List<Log> logs;
 
-    @OneToMany(mappedBy = "item")
+    @OneToMany(mappedBy = "item",cascade = CascadeType.ALL)
     private List<Notification> notifications;
 }

@@ -26,11 +26,11 @@ public class Bid {
     @Column(name = "BID_TIME")
     private Date bidTime;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "USER_ID")
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "ITEM_ID")
     private Item item;
     @OneToMany(mappedBy = "bid")
