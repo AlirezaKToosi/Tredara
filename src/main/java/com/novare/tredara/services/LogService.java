@@ -56,6 +56,8 @@ public class LogService {
             log.setActionDetails("User Created new item with email: " + userName + " and for item:" + item);
         else if (action.getActionTypeId() == 4)
             log.setActionDetails("User Added new bid with email: " + userName + " and for item:" + item);
+        else if (action.getActionTypeId() == 5)
+            log.setActionDetails("User with email: " + userName + " won the bid for item: " + item);
         log.setUser(userService.findByEmail(userName).orElse(null));
         log.setTimestamp(new Date());
         saveLog(log);

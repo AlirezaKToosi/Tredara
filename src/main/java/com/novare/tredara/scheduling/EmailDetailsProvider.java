@@ -1,9 +1,13 @@
 package com.novare.tredara.scheduling;
 
 import com.novare.tredara.models.Bid;
+import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.Item;
+import com.novare.tredara.models.Notification;
 import com.novare.tredara.repositories.BidRepo;
 import com.novare.tredara.services.EmailSenderService;
+import com.novare.tredara.services.LogService;
+import com.novare.tredara.services.NotificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -18,10 +22,15 @@ public class EmailDetailsProvider {
     BidRepo bidRepo;
 
     EmailSenderService emailSenderService;
+    NotificationService notificationService;
+    LogService logService;
 
-    public  EmailDetailsProvider(BidRepo bidRepo, EmailSenderService emailSenderService){
+    public  EmailDetailsProvider(BidRepo bidRepo, EmailSenderService emailSenderService
+            ,NotificationService notificationService,LogService logService){
         this.bidRepo = bidRepo;
         this.emailSenderService = emailSenderService;
+        this.notificationService=notificationService;
+        this.logService=logService;
     }
 
     Logger log = LoggerFactory.getLogger(CustomSchedular.class);
@@ -51,11 +60,12 @@ public class EmailDetailsProvider {
             winnerEmail = newBid.getUser().getEmail();
 
             log.info("Sending Email to Winner " +  newBid.getUser().getFullName());
-
-            String winnerMailBody = "Congratulations! You are the winner of bid for item " +  item.getTitle() + "." + "\r\n" + "Please visit our site for further processing.";
+            Notification winnerNotification=notificationService.createNotificationForBidWinner(newBid);
+            String winnerMailBody = "Congratulations! You are the winner of bid for item " +  item.getTitle() + "." + "\r\n" + "Please visit ou site for further processing.";
             String winnerMailSubject = "You win the bid for item " + item.getTitle() + " !";
             emailSenderService.sendSimpleEmail(newBid.getUser().getEmail(),winnerMailBody, winnerMailSubject );
             log.info("Mail sent to winner...");
+            notificationService.markNotificationAsSent(winnerNotification);
         }
 
 
