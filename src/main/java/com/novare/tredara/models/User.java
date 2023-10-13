@@ -38,6 +38,8 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Item> items;
+    @OneToMany(mappedBy = "user")
+    private List<Notification> notifications;
 
     public User(String fullName, String email, String password) {
         this.fullName = fullName;

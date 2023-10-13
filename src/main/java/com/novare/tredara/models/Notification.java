@@ -22,5 +22,8 @@ public class Notification {
     @ManyToOne
     @JoinColumn(name = "BID_ID")
     private Bid bid;
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private User user;
 
 }
