@@ -24,7 +24,7 @@ public class NotificationController {
     public ResponseEntity<List<NotificationDTO>> getNotificationHistory(@Valid @RequestBody NotificationDTO notificationDTO) {
         return ResponseEntity.ok(notificationService.getFilteredNotificationHistory(notificationDTO));
     }
-    @GetMapping("/WonItemsByUser/{userId}w")
+    @GetMapping("/wonItemsByUser/{userId}w")
     public ResponseEntity<List<ItemDTO>> getSentItemsForUser(@PathVariable Long userId) {
         List<ItemDTO> sentItemIds = notificationService.getWonItemsForUser(userId);
         return ResponseEntity.ok(sentItemIds);
