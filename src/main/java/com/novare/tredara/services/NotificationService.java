@@ -2,7 +2,6 @@ package com.novare.tredara.services;
 
 import com.novare.tredara.models.*;
 import com.novare.tredara.payloads.ItemDTO;
-import com.novare.tredara.payloads.LogDTO;
 import com.novare.tredara.payloads.NotificationDTO;
 import com.novare.tredara.repositories.NotificationRepo;
 import org.springframework.beans.factory.annotation.Autowired;

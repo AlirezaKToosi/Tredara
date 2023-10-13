@@ -81,7 +81,7 @@ public class WebSecurityConfig {
         corsConfig.addAllowedOrigin(allowedOrigin); // Allow all origins
         corsConfig.addAllowedMethod("*"); // Allow all HTTP methods
         corsConfig.addAllowedHeader("*"); // Allow all headers
-
+        corsConfig.addExposedHeader("Authorization");
         // Create and return a CorsFilter with the above configuration
         org.springframework.web.cors.UrlBasedCorsConfigurationSource source =
                 new org.springframework.web.cors.UrlBasedCorsConfigurationSource();

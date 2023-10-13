@@ -4,7 +4,6 @@ import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.models.Log;
 import com.novare.tredara.models.User;
-import com.novare.tredara.payloads.LogDTO;
 import com.novare.tredara.repositories.ItemRepo;
 import com.novare.tredara.repositories.LogRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,9 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 import java.util.Optional;
 
 import static org.hibernate.validator.internal.util.Contracts.assertNotNull;

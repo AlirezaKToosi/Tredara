@@ -3,7 +3,6 @@ package com.novare.tredara.controllers;
 import com.novare.tredara.payloads.ItemInfoDTO;
 import com.novare.tredara.security.jwt.JwtTokenUtil;
 import com.novare.tredara.services.ItemService;
-import com.novare.tredara.services.LogService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

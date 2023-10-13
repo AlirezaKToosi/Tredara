@@ -39,9 +39,5 @@ class UserRepoTest {
         assertFalse(userRepo.existsByEmail(nonExistingEmail));
     }
 
-//    @Test
-//    void findById() {
-//        Optional<User> userOptional = userRepo.findById(1L);
-//        assertEquals("Alireza@gmail.com", userOptional.get().getEmail());
-//    }
+
 }

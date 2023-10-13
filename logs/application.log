@@ -2751,3 +2751,1006 @@ This generated password is for development use only. Your security configuration
 2023-10-13T16:52:13.090+02:00  INFO 17984 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-10-13T16:52:13.121+02:00  INFO 17984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-10-13T16:52:13.132+02:00  INFO 17984 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T17:37:05.374+02:00  INFO 14232 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 14232 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:37:05.379+02:00  INFO 14232 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:37:06.995+02:00  INFO 14232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:37:07.142+02:00  INFO 14232 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:37:08.469+02:00  INFO 14232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T17:37:08.490+02:00  INFO 14232 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T17:37:08.490+02:00  INFO 14232 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T17:37:08.662+02:00  INFO 14232 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T17:37:08.663+02:00  INFO 14232 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3165 ms
+2023-10-13T17:37:08.936+02:00  INFO 14232 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:37:09.079+02:00  INFO 14232 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T17:37:09.085+02:00  INFO 14232 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T17:37:09.373+02:00  INFO 14232 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:37:09.605+02:00  INFO 14232 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:37:09.635+02:00  INFO 14232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T17:37:10.204+02:00  INFO 14232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@278de2b2
+2023-10-13T17:37:10.207+02:00  INFO 14232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T17:37:10.887+02:00  INFO 14232 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:37:12.225+02:00  INFO 14232 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:37:14.108+02:00  INFO 14232 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:37:14.956+02:00  INFO 14232 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T17:37:16.140+02:00  WARN 14232 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T17:37:17.442+02:00  INFO 14232 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5901757, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ab98032, org.springframework.security.web.context.SecurityContextHolderFilter@cd8e702, org.springframework.security.web.header.HeaderWriterFilter@720da195, org.springframework.security.web.authentication.logout.LogoutFilter@178be8fc, com.novare.tredara.security.jwt.AuthTokenFilter@2351255a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@348523f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5afb0a4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78fd9a11, org.springframework.security.web.session.SessionManagementFilter@21dfec, org.springframework.security.web.access.ExceptionTranslationFilter@418f3cde, org.springframework.security.web.access.intercept.AuthorizationFilter@632d8166]
+2023-10-13T17:37:17.855+02:00  INFO 14232 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T17:37:17.870+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:37:17.873+02:00  INFO 14232 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 13.21 seconds (process running for 13.934)
+2023-10-13T17:37:18.029+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:37:46.295+02:00  INFO 14232 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-13T17:37:46.296+02:00  INFO 14232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-13T17:37:46.298+02:00  INFO 14232 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-10-13T17:37:46.856+02:00  INFO 14232 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T17:38:17.876+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:38:17.880+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:39:17.877+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:39:17.880+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:40:17.880+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:40:17.883+02:00  INFO 14232 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:40:44.458+02:00  INFO 14232 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:40:44.462+02:00  INFO 14232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T17:40:44.474+02:00  INFO 14232 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T17:45:40.283+02:00  INFO 10328 --- [main] c.n.tredara.repositories.UserRepoTest    : Starting UserRepoTest using Java 17.0.2 with PID 10328 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:45:40.286+02:00  INFO 10328 --- [main] c.n.tredara.repositories.UserRepoTest    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:45:40.949+02:00  INFO 10328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:45:41.082+02:00  INFO 10328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:45:41.191+02:00  INFO 10328 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-13T17:45:41.485+02:00  INFO 10328 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:d94ca26c-c416-4058-8544-c95f3b97ff5c;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-13T17:45:41.911+02:00  INFO 10328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:45:42.008+02:00  INFO 10328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T17:45:42.011+02:00  INFO 10328 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T17:45:42.189+02:00  INFO 10328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:45:42.200+02:00  INFO 10328 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:45:42.641+02:00  INFO 10328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:45:43.461+02:00  INFO 10328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:45:43.551+02:00  INFO 10328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:45:44.302+02:00  INFO 10328 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T17:45:45.110+02:00  INFO 10328 --- [main] c.n.tredara.repositories.UserRepoTest    : Started UserRepoTest in 5.438 seconds (process running for 9.646)
+2023-10-13T17:45:45.495+02:00  INFO 10328 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.BidControllerTest
+2023-10-13T17:45:45.552+02:00  INFO 10328 --- [main] c.n.t.controllers.BidControllerTest      : Starting BidControllerTest using Java 17.0.2 with PID 10328 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:45:45.552+02:00  INFO 10328 --- [main] c.n.t.controllers.BidControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:45:46.220+02:00  WARN 10328 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c07638e4-e353-4ae0-bfc9-6d8896c94b9a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-13T17:45:46.419+02:00  INFO 10328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6253df71, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c4b5d13, org.springframework.security.web.context.SecurityContextHolderFilter@e071deb, org.springframework.security.web.header.HeaderWriterFilter@b43db07, org.springframework.security.web.authentication.logout.LogoutFilter@22479830, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@573d3ec6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58507830, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@201cc412, org.springframework.security.web.access.ExceptionTranslationFilter@67eb43a0]
+2023-10-13T17:45:47.631+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:47.632+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:47.633+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:47.661+02:00  INFO 10328 --- [main] c.n.t.controllers.BidControllerTest      : Started BidControllerTest in 2.15 seconds (process running for 12.196)
+2023-10-13T17:45:48.515+02:00  INFO 10328 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.BidRepoTest]: BidRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T17:45:48.523+02:00  INFO 10328 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.BidRepoTest
+2023-10-13T17:45:48.724+02:00  INFO 10328 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.controllers.integrationTests.BidControllerTest]: BidControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T17:45:48.744+02:00  INFO 10328 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.integrationTests.BidControllerTest
+2023-10-13T17:45:48.780+02:00  INFO 10328 --- [main] c.n.t.c.i.BidControllerTest              : Starting BidControllerTest using Java 17.0.2 with PID 10328 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:45:48.780+02:00  INFO 10328 --- [main] c.n.t.c.i.BidControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:45:49.325+02:00  INFO 10328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:45:49.353+02:00  INFO 10328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:45:49.619+02:00  INFO 10328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:45:49.627+02:00  INFO 10328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:45:49.628+02:00  INFO 10328 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:45:49.632+02:00  INFO 10328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T17:45:49.660+02:00  INFO 10328 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn12: url=jdbc:h2:mem:db user=SA
+2023-10-13T17:45:49.663+02:00  INFO 10328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T17:45:49.712+02:00  INFO 10328 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:45:49.835+02:00  INFO 10328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:45:49.870+02:00  INFO 10328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:45:50.393+02:00  WARN 10328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T17:45:50.429+02:00  INFO 10328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12619285, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1081906a, org.springframework.security.web.context.SecurityContextHolderFilter@3e900cf4, org.springframework.security.web.header.HeaderWriterFilter@1145eb60, org.springframework.security.web.authentication.logout.LogoutFilter@6371c6ee, com.novare.tredara.security.jwt.AuthTokenFilter@5a04e7ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@412d379c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b6dc76c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a27a096, org.springframework.security.web.session.SessionManagementFilter@785fd189, org.springframework.security.web.access.ExceptionTranslationFilter@6071132e, org.springframework.security.web.access.intercept.AuthorizationFilter@147ee877]
+2023-10-13T17:45:51.601+02:00  INFO 10328 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:45:51.601+02:00  INFO 10328 --- [main] c.n.t.c.i.BidControllerTest              : Started BidControllerTest in 2.847 seconds (process running for 16.136)
+2023-10-13T17:45:51.611+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:51.611+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:51.613+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:51.654+02:00  INFO 10328 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:45:51.786+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:51.786+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:51.787+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:51.853+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:51.853+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:51.854+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:51.922+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:51.922+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:51.923+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:51.967+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:51.967+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:51.969+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:45:52.027+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:52.027+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:52.028+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:52.076+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:52.077+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:52.079+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:45:52.127+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:52.128+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:52.129+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:52.165+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:52.166+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:52.167+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:52.206+02:00  INFO 10328 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:45:52.207+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:45:52.208+02:00  INFO 10328 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:45:52.268+02:00  INFO 10328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:45:52.284+02:00  INFO 10328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:45:52.289+02:00  WARN 10328 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-10-13T17:45:52.290+02:00 ERROR 10328 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-10-13T17:45:52.291+02:00  WARN 10328 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2023-10-13T17:45:52.291+02:00 ERROR 10328 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2023-10-13T17:45:52.293+02:00  WARN 10328 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution [Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]] [n/a]
+2023-10-13T17:45:52.293+02:00  INFO 10328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T17:45:52.297+02:00  INFO 10328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T17:52:11.752+02:00  INFO 14956 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 14956 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:52:11.756+02:00  INFO 14956 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:52:13.355+02:00  INFO 14956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:52:13.488+02:00  INFO 14956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:52:14.871+02:00  INFO 14956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T17:52:14.888+02:00  INFO 14956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T17:52:14.889+02:00  INFO 14956 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T17:52:15.065+02:00  INFO 14956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T17:52:15.066+02:00  INFO 14956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3163 ms
+2023-10-13T17:52:15.305+02:00  INFO 14956 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:52:15.414+02:00  INFO 14956 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T17:52:15.418+02:00  INFO 14956 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T17:52:15.674+02:00  INFO 14956 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:52:15.897+02:00  INFO 14956 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:52:15.929+02:00  INFO 14956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T17:52:16.436+02:00  INFO 14956 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6248cfab
+2023-10-13T17:52:16.439+02:00  INFO 14956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T17:52:17.171+02:00  INFO 14956 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:52:18.314+02:00  INFO 14956 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:52:18.621+02:00  INFO 14956 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:52:19.467+02:00  INFO 14956 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T17:52:20.651+02:00  WARN 14956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T17:52:22.039+02:00  INFO 14956 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2395c168, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28322fd3, org.springframework.security.web.context.SecurityContextHolderFilter@129a20d8, org.springframework.security.web.header.HeaderWriterFilter@1a9b9095, org.springframework.security.web.authentication.logout.LogoutFilter@151ce559, com.novare.tredara.security.jwt.AuthTokenFilter@39f7cc46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@366fd3cb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a51a39d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e47a922, org.springframework.security.web.session.SessionManagementFilter@1c8bf01d, org.springframework.security.web.access.ExceptionTranslationFilter@75715a14, org.springframework.security.web.access.intercept.AuthorizationFilter@4ed8ae9f]
+2023-10-13T17:52:22.510+02:00  INFO 14956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T17:52:22.526+02:00  INFO 14956 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:52:22.530+02:00  INFO 14956 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 11.472 seconds (process running for 12.122)
+2023-10-13T17:52:22.709+02:00  INFO 14956 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:52:28.142+02:00  INFO 14956 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:52:28.146+02:00  INFO 14956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T17:52:28.155+02:00  INFO 14956 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T17:52:55.071+02:00  INFO 7632 --- [main] c.n.t.controllers.BidControllerTest      : Starting BidControllerTest using Java 17.0.2 with PID 7632 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:52:55.073+02:00  INFO 7632 --- [main] c.n.t.controllers.BidControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:52:58.135+02:00  WARN 7632 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 258219f6-585b-4207-a9e7-4132f8484e26
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-13T17:52:58.380+02:00  INFO 7632 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b8507df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ed25612, org.springframework.security.web.context.SecurityContextHolderFilter@639cb788, org.springframework.security.web.header.HeaderWriterFilter@36df4c26, org.springframework.security.web.authentication.logout.LogoutFilter@44d43cc9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d25f816, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54329480, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@451816fd, org.springframework.security.web.access.ExceptionTranslationFilter@710ae6a7]
+2023-10-13T17:52:59.823+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:52:59.823+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:52:59.825+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:52:59.872+02:00  INFO 7632 --- [main] c.n.t.controllers.BidControllerTest      : Started BidControllerTest in 5.377 seconds (process running for 7.163)
+2023-10-13T17:53:00.534+02:00  INFO 7632 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.controllers.integrationTests.BidControllerTest]: BidControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T17:53:00.566+02:00  INFO 7632 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.integrationTests.BidControllerTest
+2023-10-13T17:53:00.654+02:00  INFO 7632 --- [main] c.n.t.c.i.BidControllerTest              : Starting BidControllerTest using Java 17.0.2 with PID 7632 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:53:00.655+02:00  INFO 7632 --- [main] c.n.t.c.i.BidControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:53:01.439+02:00  INFO 7632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:53:01.567+02:00  INFO 7632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:53:02.130+02:00  INFO 7632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:53:02.254+02:00  INFO 7632 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T17:53:02.257+02:00  INFO 7632 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T17:53:02.482+02:00  INFO 7632 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:53:02.494+02:00  INFO 7632 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:53:02.520+02:00  INFO 7632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T17:53:02.811+02:00  INFO 7632 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2023-10-13T17:53:02.813+02:00  INFO 7632 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T17:53:03.266+02:00  INFO 7632 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:53:04.092+02:00  INFO 7632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:53:04.189+02:00  INFO 7632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:53:04.997+02:00  INFO 7632 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T17:53:06.044+02:00  WARN 7632 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T17:53:06.086+02:00  INFO 7632 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2f75c3f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@313c7515, org.springframework.security.web.context.SecurityContextHolderFilter@5582249c, org.springframework.security.web.header.HeaderWriterFilter@4f37f2e5, org.springframework.security.web.authentication.logout.LogoutFilter@16224bd8, com.novare.tredara.security.jwt.AuthTokenFilter@1cf8d43b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19801b8d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62b2885d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@287cfa9c, org.springframework.security.web.session.SessionManagementFilter@6a6b4536, org.springframework.security.web.access.ExceptionTranslationFilter@437aa3ea, org.springframework.security.web.access.intercept.AuthorizationFilter@20531934]
+2023-10-13T17:53:07.396+02:00  INFO 7632 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T17:53:07.397+02:00  INFO 7632 --- [main] c.n.t.c.i.BidControllerTest              : Started BidControllerTest in 6.817 seconds (process running for 14.687)
+2023-10-13T17:53:07.411+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:07.411+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:07.413+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:53:07.677+02:00  INFO 7632 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T17:53:07.850+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:07.851+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:07.859+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:53:07.951+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:07.952+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:07.953+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:53:08.047+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.047+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.048+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:53:08.088+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.088+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.090+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:53:08.184+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.185+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.186+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:53:08.252+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.252+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.254+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T17:53:08.314+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.314+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.317+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-10-13T17:53:08.395+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.395+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.398+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-10-13T17:53:08.470+02:00  INFO 7632 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T17:53:08.470+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T17:53:08.472+02:00  INFO 7632 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T17:53:08.740+02:00  INFO 7632 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.BidRepoTest]: BidRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T17:53:08.776+02:00  INFO 7632 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.BidRepoTest
+2023-10-13T17:53:08.805+02:00  INFO 7632 --- [main] c.n.tredara.repositories.BidRepoTest     : Starting BidRepoTest using Java 17.0.2 with PID 7632 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T17:53:08.806+02:00  INFO 7632 --- [main] c.n.tredara.repositories.BidRepoTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T17:53:08.963+02:00  INFO 7632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T17:53:09.001+02:00  INFO 7632 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 5 JPA repository interfaces.
+2023-10-13T17:53:09.022+02:00  INFO 7632 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-13T17:53:09.061+02:00  INFO 7632 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:eb0930bb-018b-4bc6-8a33-6d590d5c90cf;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-13T17:53:09.091+02:00  INFO 7632 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T17:53:09.101+02:00  INFO 7632 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:53:09.101+02:00  INFO 7632 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T17:53:09.157+02:00  INFO 7632 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T17:53:09.318+02:00  INFO 7632 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T17:53:09.343+02:00  INFO 7632 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:53:09.556+02:00  INFO 7632 --- [main] c.n.tredara.repositories.BidRepoTest     : Started BidRepoTest in 0.774 seconds (process running for 16.847)
+2023-10-13T17:53:09.839+02:00  INFO 7632 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.UserRepoTest]: UserRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T17:53:09.853+02:00  INFO 7632 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.UserRepoTest
+2023-10-13T17:53:10.640+02:00  INFO 7632 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T17:53:10.840+02:00  INFO 7632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T17:53:10.850+02:00  INFO 7632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T17:53:10.851+02:00  INFO 7632 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:02:56.770+02:00  INFO 15264 --- [main] c.n.t.controllers.BidControllerTest      : Starting BidControllerTest using Java 17.0.2 with PID 15264 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:02:56.790+02:00  INFO 15264 --- [main] c.n.t.controllers.BidControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:03:01.375+02:00  WARN 15264 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 70fe5fa8-7dfb-4671-9ed9-924cd298f9c8
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-13T21:03:01.723+02:00  INFO 15264 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@384472bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@656ec00d, org.springframework.security.web.context.SecurityContextHolderFilter@76828577, org.springframework.security.web.header.HeaderWriterFilter@62058742, org.springframework.security.web.authentication.logout.LogoutFilter@59e082f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@639cb788, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a4af081, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b8507df, org.springframework.security.web.access.ExceptionTranslationFilter@3ea48c37]
+2023-10-13T21:03:03.635+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:03.636+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:03.639+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:03:03.700+02:00  INFO 15264 --- [main] c.n.t.controllers.BidControllerTest      : Started BidControllerTest in 7.697 seconds (process running for 9.82)
+2023-10-13T21:03:04.404+02:00  INFO 15264 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.controllers.integrationTests.BidControllerTest]: BidControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:03:04.463+02:00  INFO 15264 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.integrationTests.BidControllerTest
+2023-10-13T21:03:04.517+02:00  INFO 15264 --- [main] c.n.t.c.i.BidControllerTest              : Starting BidControllerTest using Java 17.0.2 with PID 15264 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:03:04.517+02:00  INFO 15264 --- [main] c.n.t.c.i.BidControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:03:05.533+02:00  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T21:03:05.667+02:00  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 5 JPA repository interfaces.
+2023-10-13T21:03:06.261+02:00  INFO 15264 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T21:03:06.444+02:00  INFO 15264 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T21:03:06.448+02:00  INFO 15264 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T21:03:06.802+02:00  INFO 15264 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:03:06.817+02:00  INFO 15264 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T21:03:06.848+02:00  INFO 15264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T21:03:07.141+02:00  INFO 15264 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2023-10-13T21:03:07.143+02:00  INFO 15264 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T21:03:07.652+02:00  INFO 15264 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:03:08.658+02:00  INFO 15264 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T21:03:08.744+02:00  INFO 15264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:03:09.673+02:00  INFO 15264 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T21:03:10.801+02:00  WARN 15264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T21:03:10.843+02:00  INFO 15264 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19801b8d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62b2885d, org.springframework.security.web.context.SecurityContextHolderFilter@3e0658f8, org.springframework.security.web.header.HeaderWriterFilter@696faa2b, org.springframework.security.web.authentication.logout.LogoutFilter@4f37f2e5, com.novare.tredara.security.jwt.AuthTokenFilter@7b48b933, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d1206b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73a706b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@524023c8, org.springframework.security.web.session.SessionManagementFilter@409e0e69, org.springframework.security.web.access.ExceptionTranslationFilter@249b2dd4, org.springframework.security.web.access.intercept.AuthorizationFilter@5582249c]
+2023-10-13T21:03:12.127+02:00  INFO 15264 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T21:03:12.127+02:00  INFO 15264 --- [main] c.n.t.c.i.BidControllerTest              : Started BidControllerTest in 7.651 seconds (process running for 18.248)
+2023-10-13T21:03:12.142+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.142+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.143+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:03:12.378+02:00  INFO 15264 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T21:03:12.566+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.567+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.569+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:03:12.682+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.682+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.686+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2023-10-13T21:03:12.776+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.776+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.779+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-10-13T21:03:12.848+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.849+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.850+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:03:12.955+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:12.955+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:12.957+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:03:13.014+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:13.014+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:13.017+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-10-13T21:03:13.120+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:13.120+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:13.123+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2023-10-13T21:03:13.183+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:13.183+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:13.184+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:03:13.239+02:00  INFO 15264 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:03:13.239+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:03:13.241+02:00  INFO 15264 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:03:13.515+02:00  INFO 15264 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.BidRepoTest]: BidRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:03:13.543+02:00  INFO 15264 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.BidRepoTest
+2023-10-13T21:03:13.586+02:00  INFO 15264 --- [main] c.n.tredara.repositories.BidRepoTest     : Starting BidRepoTest using Java 17.0.2 with PID 15264 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:03:13.586+02:00  INFO 15264 --- [main] c.n.tredara.repositories.BidRepoTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:03:13.738+02:00  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T21:03:13.766+02:00  INFO 15264 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
+2023-10-13T21:03:13.781+02:00  INFO 15264 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-13T21:03:13.814+02:00  INFO 15264 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:26f42c92-ccae-4aa1-bbd2-15f80b8fe63e;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-13T21:03:13.843+02:00  INFO 15264 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T21:03:13.851+02:00  INFO 15264 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:03:13.851+02:00  INFO 15264 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T21:03:13.900+02:00  INFO 15264 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:03:14.076+02:00  INFO 15264 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T21:03:14.094+02:00  INFO 15264 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:03:14.296+02:00  INFO 15264 --- [main] c.n.tredara.repositories.BidRepoTest     : Started BidRepoTest in 0.747 seconds (process running for 20.416)
+2023-10-13T21:03:14.608+02:00  INFO 15264 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.UserRepoTest]: UserRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:03:14.624+02:00  INFO 15264 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.UserRepoTest
+2023-10-13T21:03:15.408+02:00  INFO 15264 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:03:15.625+02:00  INFO 15264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T21:03:15.645+02:00  INFO 15264 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T21:03:15.646+02:00  INFO 15264 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:26:54.094+02:00  INFO 17628 --- [main] c.n.t.controllers.BidControllerTest      : Starting BidControllerTest using Java 17.0.2 with PID 17628 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:26:54.094+02:00  INFO 17628 --- [main] c.n.t.controllers.BidControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:26:56.990+02:00  WARN 17628 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: ae23d0d7-779e-4398-9c29-94a78cfe9cb5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-13T21:26:57.193+02:00  INFO 17628 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@384472bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@656ec00d, org.springframework.security.web.context.SecurityContextHolderFilter@76828577, org.springframework.security.web.header.HeaderWriterFilter@62058742, org.springframework.security.web.authentication.logout.LogoutFilter@59e082f8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@639cb788, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a4af081, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b8507df, org.springframework.security.web.access.ExceptionTranslationFilter@3ea48c37]
+2023-10-13T21:26:58.569+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:26:58.569+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:26:58.571+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:26:58.621+02:00  INFO 17628 --- [main] c.n.t.controllers.BidControllerTest      : Started BidControllerTest in 5.072 seconds (process running for 6.735)
+2023-10-13T21:26:59.232+02:00  INFO 17628 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.controllers.integrationTests.BidControllerTest]: BidControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:26:59.292+02:00  INFO 17628 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.integrationTests.BidControllerTest
+2023-10-13T21:26:59.342+02:00  INFO 17628 --- [main] c.n.t.c.i.BidControllerTest              : Starting BidControllerTest using Java 17.0.2 with PID 17628 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:26:59.342+02:00  INFO 17628 --- [main] c.n.t.c.i.BidControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:27:00.142+02:00  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T21:27:00.292+02:00  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 5 JPA repository interfaces.
+2023-10-13T21:27:00.842+02:00  INFO 17628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T21:27:00.928+02:00  INFO 17628 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T21:27:00.931+02:00  INFO 17628 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T21:27:01.142+02:00  INFO 17628 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:27:01.142+02:00  INFO 17628 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T21:27:01.176+02:00  INFO 17628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T21:27:01.423+02:00  INFO 17628 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2023-10-13T21:27:01.426+02:00  INFO 17628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T21:27:01.835+02:00  INFO 17628 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:27:02.593+02:00  INFO 17628 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T21:27:02.687+02:00  INFO 17628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:27:03.432+02:00  INFO 17628 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T21:27:04.341+02:00  WARN 17628 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T21:27:04.383+02:00  INFO 17628 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@20531934, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f75c3f3, org.springframework.security.web.context.SecurityContextHolderFilter@6a6b4536, org.springframework.security.web.header.HeaderWriterFilter@437aa3ea, org.springframework.security.web.authentication.logout.LogoutFilter@524023c8, com.novare.tredara.security.jwt.AuthTokenFilter@1cf8d43b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5582249c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19801b8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@313c7515, org.springframework.security.web.session.SessionManagementFilter@5f4491b9, org.springframework.security.web.access.ExceptionTranslationFilter@73a706b1, org.springframework.security.web.access.intercept.AuthorizationFilter@6cdea0fe]
+2023-10-13T21:27:05.440+02:00  INFO 17628 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T21:27:05.440+02:00  INFO 17628 --- [main] c.n.t.c.i.BidControllerTest              : Started BidControllerTest in 6.135 seconds (process running for 13.556)
+2023-10-13T21:27:05.440+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:05.440+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:05.456+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 16 ms
+2023-10-13T21:27:05.641+02:00  INFO 17628 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T21:27:05.809+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:05.809+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:05.810+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:27:05.866+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:05.866+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:05.867+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:27:05.938+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:05.938+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:05.940+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:27:05.976+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:05.976+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:05.978+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:27:06.040+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:06.040+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:06.040+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-10-13T21:27:06.086+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:06.087+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:06.088+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:27:06.137+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:06.138+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:06.139+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:27:06.180+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:06.180+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:06.182+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T21:27:06.229+02:00  INFO 17628 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T21:27:06.229+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T21:27:06.231+02:00  INFO 17628 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T21:27:06.440+02:00  INFO 17628 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.BidRepoTest]: BidRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:27:06.471+02:00  INFO 17628 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.BidRepoTest
+2023-10-13T21:27:06.490+02:00  INFO 17628 --- [main] c.n.tredara.repositories.BidRepoTest     : Starting BidRepoTest using Java 17.0.2 with PID 17628 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T21:27:06.490+02:00  INFO 17628 --- [main] c.n.tredara.repositories.BidRepoTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T21:27:06.619+02:00  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T21:27:06.640+02:00  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 5 JPA repository interfaces.
+2023-10-13T21:27:06.662+02:00  INFO 17628 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-13T21:27:06.690+02:00  INFO 17628 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:23c5e52c-7cf9-4020-a788-c89a8501d859;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-13T21:27:06.723+02:00  INFO 17628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T21:27:06.734+02:00  INFO 17628 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:27:06.734+02:00  INFO 17628 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T21:27:06.784+02:00  INFO 17628 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T21:27:06.890+02:00  INFO 17628 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T21:27:06.905+02:00  INFO 17628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:27:07.064+02:00  INFO 17628 --- [main] c.n.tredara.repositories.BidRepoTest     : Started BidRepoTest in 0.588 seconds (process running for 15.178)
+2023-10-13T21:27:07.288+02:00  INFO 17628 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.UserRepoTest]: UserRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T21:27:07.290+02:00  INFO 17628 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.UserRepoTest
+2023-10-13T21:27:07.912+02:00  INFO 17628 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T21:27:08.098+02:00  INFO 17628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T21:27:08.109+02:00  INFO 17628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T21:27:08.110+02:00  INFO 17628 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T22:45:15.979+02:00  INFO 9864 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 9864 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T22:45:15.984+02:00  INFO 9864 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T22:45:18.183+02:00  INFO 9864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T22:45:18.309+02:00  INFO 9864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 5 JPA repository interfaces.
+2023-10-13T22:45:19.651+02:00  INFO 9864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T22:45:19.672+02:00  INFO 9864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T22:45:19.673+02:00  INFO 9864 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T22:45:19.834+02:00  INFO 9864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T22:45:19.834+02:00  INFO 9864 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3720 ms
+2023-10-13T22:45:20.115+02:00  INFO 9864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T22:45:20.264+02:00  INFO 9864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T22:45:20.268+02:00  INFO 9864 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T22:45:20.521+02:00  INFO 9864 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T22:45:20.756+02:00  INFO 9864 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T22:45:20.782+02:00  INFO 9864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T22:45:21.452+02:00  INFO 9864 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45c90a05
+2023-10-13T22:45:21.455+02:00  INFO 9864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T22:45:22.072+02:00  INFO 9864 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T22:45:23.134+02:00  INFO 9864 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T22:45:23.324+02:00  INFO 9864 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T22:45:24.295+02:00  INFO 9864 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T22:45:25.330+02:00  WARN 9864 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T22:45:26.667+02:00  INFO 9864 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8a607a9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ed8ae9f, org.springframework.security.web.context.SecurityContextHolderFilter@5afb0a4f, org.springframework.security.web.header.HeaderWriterFilter@4039d109, org.springframework.security.web.authentication.logout.LogoutFilter@36f807f5, com.novare.tredara.security.jwt.AuthTokenFilter@4d145177, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18cdacd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@129a20d8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a618847, org.springframework.security.web.session.SessionManagementFilter@28897ca, org.springframework.security.web.access.ExceptionTranslationFilter@3c0a4c8b, org.springframework.security.web.access.intercept.AuthorizationFilter@ab98032]
+2023-10-13T22:45:27.081+02:00  INFO 9864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T22:45:27.093+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:45:27.094+02:00  INFO 9864 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 12.145 seconds (process running for 13.106)
+2023-10-13T22:45:27.266+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:45:47.518+02:00  INFO 9864 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-13T22:45:47.518+02:00  INFO 9864 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-13T22:45:47.520+02:00  INFO 9864 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-10-13T22:46:27.101+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:46:27.105+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:47:24.390+02:00 ERROR 9864 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.] with root cause
+
+java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
+	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:132) ~[jjwt-api-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:527) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.novare.tredara.security.jwt.JwtTokenUtil.getUserNameFromJwtToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.novare.tredara.security.jwt.JwtTokenUtil.getUsernameFromRequest(JwtTokenUtil.java:43) ~[classes/:na]
+	at com.novare.tredara.controllers.ItemController.createItem(ItemController.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.13.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.13.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at com.novare.tredara.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:53) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-10-13T22:47:27.096+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:47:27.099+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:48:03.888+02:00  INFO 9864 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Trying to convert base64 image and store it to filesystem..
+2023-10-13T22:48:03.925+02:00  INFO 9864 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : image successfully stored, image url is: http://localhost:8080/files/1697230083923.png
+2023-10-13T22:48:03.988+02:00  INFO 9864 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Item is saved in database
+2023-10-13T22:48:27.105+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:48:27.253+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Item with item id 25 is Closed.
+2023-10-13T22:48:27.253+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Sending Email to all bidders and winner!
+2023-10-13T22:48:27.259+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Successfully sent Email to all bidders and winner
+2023-10-13T22:49:27.101+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:49:27.105+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:50:27.108+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:50:27.111+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:51:27.105+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:51:27.108+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:52:27.103+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:52:27.106+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:53:27.096+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:53:27.099+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:54:27.096+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:54:27.100+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:55:27.096+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:55:27.100+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:56:27.105+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:56:27.108+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:57:27.107+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:57:27.110+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:58:27.106+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:58:27.109+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T22:59:27.101+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T22:59:27.106+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:00:27.096+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:00:27.099+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:01:27.095+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:01:27.099+02:00  INFO 9864 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:01:44.951+02:00  INFO 9864 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:01:44.956+02:00  INFO 9864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T23:01:44.972+02:00  INFO 9864 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T23:01:50.401+02:00  INFO 24444 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 24444 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:01:50.405+02:00  INFO 24444 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:01:52.444+02:00  INFO 24444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T23:01:52.572+02:00  INFO 24444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 5 JPA repository interfaces.
+2023-10-13T23:01:53.765+02:00  INFO 24444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T23:01:53.780+02:00  INFO 24444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T23:01:53.780+02:00  INFO 24444 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T23:01:54.039+02:00  INFO 24444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T23:01:54.040+02:00  INFO 24444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3497 ms
+2023-10-13T23:01:54.308+02:00  INFO 24444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T23:01:54.441+02:00  INFO 24444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T23:01:54.446+02:00  INFO 24444 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T23:01:54.733+02:00  INFO 24444 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:01:54.983+02:00  INFO 24444 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T23:01:55.014+02:00  INFO 24444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T23:01:55.618+02:00  INFO 24444 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@37e55819
+2023-10-13T23:01:55.624+02:00  INFO 24444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T23:01:56.225+02:00  INFO 24444 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:01:57.500+02:00  INFO 24444 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T23:01:57.656+02:00  INFO 24444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:01:58.505+02:00  INFO 24444 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T23:01:59.644+02:00  WARN 24444 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T23:02:00.970+02:00  INFO 24444 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5901757, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ab98032, org.springframework.security.web.context.SecurityContextHolderFilter@cd8e702, org.springframework.security.web.header.HeaderWriterFilter@720da195, org.springframework.security.web.authentication.logout.LogoutFilter@178be8fc, com.novare.tredara.security.jwt.AuthTokenFilter@4f836d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@348523f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5afb0a4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@78fd9a11, org.springframework.security.web.session.SessionManagementFilter@21dfec, org.springframework.security.web.access.ExceptionTranslationFilter@418f3cde, org.springframework.security.web.access.intercept.AuthorizationFilter@632d8166]
+2023-10-13T23:02:01.400+02:00  INFO 24444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T23:02:01.415+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:02:01.416+02:00  INFO 24444 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 11.769 seconds (process running for 12.44)
+2023-10-13T23:02:01.588+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:02:07.258+02:00  INFO 24444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-13T23:02:07.259+02:00  INFO 24444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-13T23:02:07.260+02:00  INFO 24444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-13T23:02:07.734+02:00  INFO 24444 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:02:21.270+02:00 ERROR 24444 --- [http-nio-8080-exec-5] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:02:24.739+02:00  INFO 24444 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:02:25.631+02:00  INFO 24444 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:02:27.818+02:00 ERROR 24444 --- [http-nio-8080-exec-6] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:02:29.702+02:00  INFO 24444 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:02:41.120+02:00 ERROR 24444 --- [http-nio-8080-exec-7] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:02:41.214+02:00 ERROR 24444 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0] with root cause
+
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:275) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.novare.tredara.security.jwt.JwtTokenUtil.getUserNameFromJwtToken(JwtTokenUtil.java:54) ~[classes/:na]
+	at com.novare.tredara.security.jwt.JwtTokenUtil.getUsernameFromRequest(JwtTokenUtil.java:43) ~[classes/:na]
+	at com.novare.tredara.controllers.ItemController.createItem(ItemController.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.13.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.12.jar:6.0.12]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.13.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at com.novare.tredara.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:53) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.1.4.jar:6.1.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.12.jar:6.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.13.jar:10.1.13]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-10-13T23:03:01.425+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:03:01.431+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:04:01.418+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:04:01.422+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:05:01.428+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:05:01.431+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:06:01.418+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:06:01.423+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:06:19.254+02:00 ERROR 24444 --- [http-nio-8080-exec-2] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:06:26.757+02:00  INFO 24444 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:07:01.416+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:07:01.421+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:08:01.422+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:08:01.426+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:09:01.423+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:09:01.427+02:00  INFO 24444 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:09:34.141+02:00  INFO 24444 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:09:34.145+02:00  INFO 24444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T23:09:34.156+02:00  INFO 24444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T23:09:40.037+02:00  INFO 23556 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 23556 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:09:40.041+02:00  INFO 23556 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:09:41.540+02:00  INFO 23556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T23:09:41.653+02:00  INFO 23556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 5 JPA repository interfaces.
+2023-10-13T23:09:43.013+02:00  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T23:09:43.027+02:00  INFO 23556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T23:09:43.029+02:00  INFO 23556 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T23:09:43.205+02:00  INFO 23556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T23:09:43.206+02:00  INFO 23556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3042 ms
+2023-10-13T23:09:43.415+02:00  INFO 23556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T23:09:43.569+02:00  INFO 23556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T23:09:43.574+02:00  INFO 23556 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T23:09:43.828+02:00  INFO 23556 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:09:44.035+02:00  INFO 23556 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T23:09:44.068+02:00  INFO 23556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T23:09:44.595+02:00  INFO 23556 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@278de2b2
+2023-10-13T23:09:44.598+02:00  INFO 23556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T23:09:45.175+02:00  INFO 23556 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:09:46.305+02:00  INFO 23556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T23:09:46.470+02:00  INFO 23556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:09:47.249+02:00  INFO 23556 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T23:09:48.245+02:00  WARN 23556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T23:09:49.680+02:00  INFO 23556 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f0952cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@70fe15d, org.springframework.security.web.context.SecurityContextHolderFilter@75715a14, org.springframework.security.web.header.HeaderWriterFilter@5d260659, org.springframework.security.web.authentication.logout.LogoutFilter@efa6a81, com.novare.tredara.security.jwt.AuthTokenFilter@43414b88, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a9b9095, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7739bcca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7efcdcde, org.springframework.security.web.session.SessionManagementFilter@5f27d271, org.springframework.security.web.access.ExceptionTranslationFilter@5da13494, org.springframework.security.web.access.intercept.AuthorizationFilter@222b4ab1]
+2023-10-13T23:09:50.123+02:00  INFO 23556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T23:09:50.136+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:09:50.138+02:00  INFO 23556 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 10.803 seconds (process running for 11.424)
+2023-10-13T23:09:50.325+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:10:04.552+02:00  INFO 23556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-13T23:10:04.552+02:00  INFO 23556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-13T23:10:04.554+02:00  INFO 23556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-13T23:10:04.661+02:00 ERROR 23556 --- [http-nio-8080-exec-2] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:10:20.364+02:00  INFO 23556 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:10:40.872+02:00 ERROR 23556 --- [http-nio-8080-exec-1] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:10:49.270+02:00  INFO 23556 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:10:50.142+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:10:50.147+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:11:50.138+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:11:50.142+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:12:50.144+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:12:50.148+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:13:50.143+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:13:50.146+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:14:18.461+02:00  INFO 23556 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:14:29.011+02:00  INFO 23556 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:14:31.275+02:00 ERROR 23556 --- [http-nio-8080-exec-3] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:14:35.427+02:00  INFO 23556 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:14:35.537+02:00  INFO 23556 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:14:41.434+02:00  INFO 23556 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:14:50.144+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:14:50.148+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:15:50.137+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:15:50.141+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:16:50.140+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:16:50.143+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:17:50.138+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:17:50.141+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:18:50.139+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:18:50.144+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:19:50.147+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:19:50.150+02:00  INFO 23556 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:19:58.291+02:00  INFO 23556 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:19:58.294+02:00  INFO 23556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T23:19:58.305+02:00  INFO 23556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T23:20:05.523+02:00  INFO 20996 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 20996 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:20:05.526+02:00  INFO 20996 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:20:07.052+02:00  INFO 20996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T23:20:07.177+02:00  INFO 20996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2023-10-13T23:20:08.274+02:00  INFO 20996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-13T23:20:08.291+02:00  INFO 20996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-13T23:20:08.292+02:00  INFO 20996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-13T23:20:08.518+02:00  INFO 20996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-13T23:20:08.519+02:00  INFO 20996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2871 ms
+2023-10-13T23:20:08.774+02:00  INFO 20996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T23:20:08.880+02:00  INFO 20996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T23:20:08.885+02:00  INFO 20996 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T23:20:09.154+02:00  INFO 20996 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:20:09.356+02:00  INFO 20996 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T23:20:09.386+02:00  INFO 20996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T23:20:09.986+02:00  INFO 20996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5871a482
+2023-10-13T23:20:09.990+02:00  INFO 20996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T23:20:10.517+02:00  INFO 20996 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:20:11.616+02:00  INFO 20996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T23:20:11.862+02:00  INFO 20996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:20:12.695+02:00  INFO 20996 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T23:20:13.698+02:00  WARN 20996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T23:20:15.039+02:00  INFO 20996 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@d0993f0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8a607a9, org.springframework.security.web.context.SecurityContextHolderFilter@11501f90, org.springframework.security.web.header.HeaderWriterFilter@5f27d271, org.springframework.security.web.authentication.logout.LogoutFilter@7efcdcde, com.novare.tredara.security.jwt.AuthTokenFilter@89ff043, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c8bf01d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10b1f9f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ed8ae9f, org.springframework.security.web.session.SessionManagementFilter@cd8e702, org.springframework.security.web.access.ExceptionTranslationFilter@4dbf902, org.springframework.security.web.access.intercept.AuthorizationFilter@5901757]
+2023-10-13T23:20:15.473+02:00  INFO 20996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-13T23:20:15.487+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:20:15.490+02:00  INFO 20996 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 10.687 seconds (process running for 11.298)
+2023-10-13T23:20:15.689+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:20:23.998+02:00  INFO 20996 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-13T23:20:23.999+02:00  INFO 20996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-13T23:20:24.000+02:00  INFO 20996 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-10-13T23:20:24.086+02:00 ERROR 20996 --- [http-nio-8080-exec-2] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-13T23:20:27.400+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:20:34.621+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:20:59.719+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Trying to convert base64 image and store it to filesystem..
+2023-10-13T23:20:59.731+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : image successfully stored, image url is: http://localhost:8080/files/1697232059729.png
+2023-10-13T23:20:59.761+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Item is saved in database
+2023-10-13T23:21:01.296+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:08.870+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:08.871+02:00  INFO 20996 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:08.954+02:00  INFO 20996 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:15.497+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:21:15.501+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:21:31.311+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Trying to convert base64 image and store it to filesystem..
+2023-10-13T23:21:31.347+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : image successfully stored, image url is: http://localhost:8080/files/1697232091345.png
+2023-10-13T23:21:31.368+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.novare.tredara.services.ItemService    : Item is saved in database
+2023-10-13T23:21:32.697+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:37.122+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:37.128+02:00  INFO 20996 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:37.132+02:00  INFO 20996 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:37.209+02:00  INFO 20996 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:47.263+02:00  INFO 20996 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:47.267+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:47.269+02:00  INFO 20996 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:48.767+02:00  INFO 20996 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:48.767+02:00  INFO 20996 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:48.768+02:00  INFO 20996 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:48.793+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:58.774+02:00  INFO 20996 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:58.778+02:00  INFO 20996 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:58.780+02:00  INFO 20996 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:21:58.816+02:00  INFO 20996 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:00.817+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:13.196+02:00  INFO 20996 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:13.212+02:00  INFO 20996 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:13.213+02:00  INFO 20996 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:14.430+02:00  INFO 20996 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:15.497+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:22:15.501+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:22:16.127+02:00  INFO 20996 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:16.129+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:18.903+02:00  INFO 20996 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:21.747+02:00  INFO 20996 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:21.750+02:00  INFO 20996 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:22:21.751+02:00  INFO 20996 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-13T23:23:15.499+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:23:15.502+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:23:27.566+02:00  INFO 22304 --- [main] c.n.t.controllers.BidControllerTest      : Starting BidControllerTest using Java 17.0.2 with PID 22304 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:23:27.568+02:00  INFO 22304 --- [main] c.n.t.controllers.BidControllerTest      : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:23:30.879+02:00  WARN 22304 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 16531118-0bcc-4ec2-b24f-00c554358328
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-10-13T23:23:31.124+02:00  INFO 22304 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d67d5a4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a3b858f, org.springframework.security.web.context.SecurityContextHolderFilter@7b211077, org.springframework.security.web.header.HeaderWriterFilter@54329480, org.springframework.security.web.authentication.logout.LogoutFilter@c497a55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62b0bf85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8ac12e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@600bbf9e, org.springframework.security.web.access.ExceptionTranslationFilter@aca2fc3]
+2023-10-13T23:23:32.568+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:32.569+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:32.571+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T23:23:32.620+02:00  INFO 22304 --- [main] c.n.t.controllers.BidControllerTest      : Started BidControllerTest in 5.656 seconds (process running for 7.566)
+2023-10-13T23:23:33.244+02:00  INFO 22304 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.controllers.integrationTests.BidControllerTest]: BidControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T23:23:33.284+02:00  INFO 22304 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.controllers.integrationTests.BidControllerTest
+2023-10-13T23:23:33.341+02:00  INFO 22304 --- [main] c.n.t.c.i.BidControllerTest              : Starting BidControllerTest using Java 17.0.2 with PID 22304 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:23:33.342+02:00  INFO 22304 --- [main] c.n.t.c.i.BidControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:23:34.067+02:00  INFO 22304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T23:23:34.180+02:00  INFO 22304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 5 JPA repository interfaces.
+2023-10-13T23:23:34.725+02:00  INFO 22304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T23:23:34.823+02:00  INFO 22304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-13T23:23:34.828+02:00  INFO 22304 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-13T23:23:35.035+02:00  INFO 22304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:23:35.046+02:00  INFO 22304 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T23:23:35.069+02:00  INFO 22304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-13T23:23:35.390+02:00  INFO 22304 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2023-10-13T23:23:35.393+02:00  INFO 22304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-13T23:23:35.817+02:00  INFO 22304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:23:36.616+02:00  INFO 22304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T23:23:36.713+02:00  INFO 22304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:23:37.646+02:00  INFO 22304 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-13T23:23:38.693+02:00  WARN 22304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-13T23:23:38.736+02:00  INFO 22304 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79e1f733, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aecd5a4, org.springframework.security.web.context.SecurityContextHolderFilter@44ee4110, org.springframework.security.web.header.HeaderWriterFilter@4e3931, org.springframework.security.web.authentication.logout.LogoutFilter@5f4491b9, com.novare.tredara.security.jwt.AuthTokenFilter@6f88319b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f3745b2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19c4c24d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e1437aa, org.springframework.security.web.session.SessionManagementFilter@4f37f2e5, org.springframework.security.web.access.ExceptionTranslationFilter@550d3cd7, org.springframework.security.web.access.intercept.AuthorizationFilter@f6776e2]
+2023-10-13T23:23:39.866+02:00  INFO 22304 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:23:39.866+02:00  INFO 22304 --- [main] c.n.t.c.i.BidControllerTest              : Started BidControllerTest in 6.567 seconds (process running for 14.812)
+2023-10-13T23:23:39.878+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:39.878+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:39.879+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.072+02:00  INFO 22304 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:23:40.271+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.272+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.273+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.354+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.355+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.356+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.451+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.451+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.453+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T23:23:40.503+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.503+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.505+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T23:23:40.584+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.584+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.587+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2023-10-13T23:23:40.647+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.647+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.648+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.701+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.701+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.702+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.736+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.736+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.738+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-10-13T23:23:40.789+02:00  INFO 22304 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-10-13T23:23:40.790+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-10-13T23:23:40.794+02:00  INFO 22304 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2023-10-13T23:23:41.027+02:00  INFO 22304 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.BidRepoTest]: BidRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T23:23:41.056+02:00  INFO 22304 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.BidRepoTest
+2023-10-13T23:23:41.088+02:00  INFO 22304 --- [main] c.n.tredara.repositories.BidRepoTest     : Starting BidRepoTest using Java 17.0.2 with PID 22304 (started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-13T23:23:41.089+02:00  INFO 22304 --- [main] c.n.tredara.repositories.BidRepoTest     : No active profile set, falling back to 1 default profile: "default"
+2023-10-13T23:23:41.193+02:00  INFO 22304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-13T23:23:41.214+02:00  INFO 22304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+2023-10-13T23:23:41.229+02:00  INFO 22304 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-13T23:23:41.265+02:00  INFO 22304 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:5ea9c20b-b9a4-4924-9076-62d598de3006;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-13T23:23:41.294+02:00  INFO 22304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-13T23:23:41.302+02:00  INFO 22304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:23:41.303+02:00  INFO 22304 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-13T23:23:41.353+02:00  INFO 22304 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-13T23:23:41.458+02:00  INFO 22304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-13T23:23:41.476+02:00  INFO 22304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:23:41.656+02:00  INFO 22304 --- [main] c.n.tredara.repositories.BidRepoTest     : Started BidRepoTest in 0.594 seconds (process running for 16.602)
+2023-10-13T23:23:41.914+02:00  INFO 22304 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.novare.tredara.repositories.UserRepoTest]: UserRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-13T23:23:41.922+02:00  INFO 22304 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.novare.tredara.TredaraApplication for test class com.novare.tredara.repositories.UserRepoTest
+2023-10-13T23:23:42.583+02:00  INFO 22304 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:23:42.782+02:00  INFO 22304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T23:23:42.791+02:00  INFO 22304 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-13T23:23:42.792+02:00  INFO 22304 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:24:15.500+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:24:15.503+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:25:15.495+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:25:15.499+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:26:15.496+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:26:15.499+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:27:15.490+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-13T23:27:15.494+02:00  INFO 20996 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-13T23:28:13.825+02:00  INFO 20996 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-13T23:28:13.830+02:00  INFO 20996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-13T23:28:13.946+02:00  INFO 20996 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -22,8 +22,6 @@ public class ItemController {
 
     private ItemService itemService;
     private JwtTokenUtil jwtTokenUtil;
-    @Value("${jwt.CookieName}")
-    private String jwtCookie;
 
     @Autowired
     public ItemController(ItemService itemService,JwtTokenUtil jwtTokenUtil) {

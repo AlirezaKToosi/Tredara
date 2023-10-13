@@ -109,7 +109,7 @@ class BidServiceTest {
     @Test
     void addBid_shouldFailIfItemIdNotValid(){
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(1L);
@@ -133,7 +133,7 @@ class BidServiceTest {
     @Test
     void addBid_shouldFailIfSellerIdEqualsUserId(){
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setTitle("item title");
@@ -158,8 +158,8 @@ class BidServiceTest {
     @Test
     void addBid_shouldFailIfAmountLesserThanCurrentHighestBid(){
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
+        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(1L);
@@ -186,8 +186,8 @@ class BidServiceTest {
     @Test
     void addBid_shouldPassIfAmountGreaterThanCurrentHighestBid(){
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
+        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(11L);
@@ -215,8 +215,8 @@ class BidServiceTest {
     @Test
     void addBid_shouldFailIfItemIsNotActive(){
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
+        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(11L);
@@ -244,8 +244,8 @@ class BidServiceTest {
     void addBid_shouldPassIfItemIsActive(){
 
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
+        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(11L);
@@ -273,8 +273,8 @@ class BidServiceTest {
     void addBid_shouldFailIfItemEndTimeIsPassed(){
 
         BidDto bidDto = new BidDto();
-        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
-        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null);
+        User user = new User(101L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
+        User user1 = new User(102L,"aggarrohit@gmail.com","rohit agarwal","password", ERole.ROLE_CUSTOMER,null,null,null,null);
 
         Item item = new Item();
         item.setId(11L);
