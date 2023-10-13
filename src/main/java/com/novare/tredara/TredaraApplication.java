@@ -2,6 +2,7 @@ package com.novare.tredara;
 
 import com.novare.tredara.models.User;
 import com.novare.tredara.repositories.UserRepo;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +13,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
+@OpenAPIDefinition(
+        info = @io.swagger.v3.oas.annotations.info.Info(
+                title = "Tradera By Novare",
+                version = "1.0",
+                description = "Tradera Clone application Backend Preject"
+        )
+)
 public class TredaraApplication implements CommandLineRunner{
 
     @Autowired
