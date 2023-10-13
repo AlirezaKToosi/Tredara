@@ -1,8 +1,10 @@
 package com.novare.tredara.scheduling;
 
+import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.EItemStatus;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.repositories.ItemRepo;
+import com.novare.tredara.services.LogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,8 @@ public class CustomSchedular {
 
     @Autowired
     private EmailDetailsProvider emailDetailsProvider;
+    @Autowired
+    private LogService logService;
 
     Logger log = LoggerFactory.getLogger(CustomSchedular.class);
 
@@ -33,7 +37,6 @@ public class CustomSchedular {
                 item.setStatus(EItemStatus.STATUS_CLOSE);
                 itemRepo.save(item);
                 log.info("Item with item id " + item.getId() + " is Closed." );
-
                 //send mail
                 log.info("Sending Email to all bidders and winner!" );
                 emailDetailsProvider.generateEmailDetails(item);

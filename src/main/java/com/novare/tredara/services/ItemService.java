@@ -2,6 +2,7 @@ package com.novare.tredara.services;
 
 import com.novare.tredara.exceptions.ResourceNotFoundException;
 import com.novare.tredara.models.EActionType;
+import com.novare.tredara.models.EItemStatus;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.payloads.BidDto;
 import com.novare.tredara.payloads.ItemDTO;
@@ -68,6 +69,7 @@ public class ItemService {
             itemDTO.setImage_url(complete_image_URL);
         }
         Item item = this.dtoToItem(itemDTO);
+        item.setStatus(EItemStatus.STATUS_OPEN);
         Item savedItem = this.itemRepo.save(item);
         logMessage = "Item is saved in database";
         log.info(logMessage);
@@ -133,7 +135,7 @@ public class ItemService {
         // Create a custom Specification to filter items with endDateTime greater than current time
         Specification<Item> spec = (root, query, cb) ->
                 cb.greaterThan(root.get("endDateTime"), currentDate);
-        Pageable pageable = PageRequest.of(0, 8, Sort.Direction.ASC, sortBy);
+        Pageable pageable = PageRequest.of(0, 8, Sort.Direction.DESC, sortBy);
         Page<Item> endingSoonitems = this.itemRepo.findAll(spec,pageable);
 
 
