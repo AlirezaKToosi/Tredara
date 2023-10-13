@@ -52,7 +52,7 @@ public class EmailDetailsProvider {
 
             log.info("Sending Email to Winner " +  newBid.getUser().getFullName());
 
-            String winnerMailBody = "Congratulations! You are the winner of bid for item " +  item.getTitle() + "." + "\r\n" + "Please visit ou site for further processing.";
+            String winnerMailBody = "Congratulations! You are the winner of bid for item " +  item.getTitle() + "." + "\r\n" + "Please visit our site for further processing.";
             String winnerMailSubject = "You win the bid for item " + item.getTitle() + " !";
             emailSenderService.sendSimpleEmail(newBid.getUser().getEmail(),winnerMailBody, winnerMailSubject );
             log.info("Mail sent to winner...");
