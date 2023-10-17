@@ -93,7 +93,6 @@ class BidControllerTest {
 
         BidDto bidDto = new BidDto();
         bidDto.setBidTime(new Date());
-        //bidDto.setUserId(savedUser1.getId());
         bidDto.setItemId(savedItem.getId());
         bidDto.setAmount(100);
 

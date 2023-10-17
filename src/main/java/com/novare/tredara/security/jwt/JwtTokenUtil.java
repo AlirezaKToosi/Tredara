@@ -28,10 +28,9 @@ public class JwtTokenUtil {
 
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             // Extract the JWT token by removing "Bearer " prefix
-            String jwt = authorizationHeader.substring(7); // 7 is the length of "Bearer "
 
             // Now, you have the JWT token in the 'jwt' variable
-            return jwt;
+            return authorizationHeader.substring(7);
         } else {
             // Handle the case where no JWT is provided in the header
             return null;
