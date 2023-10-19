@@ -1,14 +1,13 @@
 package com.novare.tredara.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "users")
@@ -17,10 +16,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
+
     @Column(name = "EMAIL", unique = true , nullable = false)
     private String email;
 
-    @Column(name = "FULL_Name", unique = true)
+    @Column(name = "FULL_Name", nullable = false)
     private String fullName;
 
 
@@ -29,12 +29,17 @@ public class User {
 
     @Column(name = "Role")
     private ERole role;
-    @OneToMany(mappedBy = "user")
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Bid> bids;
-    @OneToMany(mappedBy = "user")
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Log> logs;
-    @OneToMany(mappedBy = "user")
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Item> items;
+    @OneToMany(mappedBy = "user")
+    private List<Notification> notifications;
 
     public User(String fullName, String email, String password) {
         this.fullName = fullName;
