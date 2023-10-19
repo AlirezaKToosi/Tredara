@@ -14,7 +14,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -49,8 +48,9 @@ public class AuthController {
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
             UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-
-            ResponseCookie jwtCookie = jwtUtils.generateJwtCookie(userDetails);
+            System.out.println("email : "+loginRequest.getEmail());
+            String jwt = jwtUtils.generateJwtToken(userDetails);
+            System.out.println("jwt : "+jwt);
 
             String role = userDetails.getAuthorities().iterator().next().getAuthority();
             UserInfoResponse response = new UserInfoResponse(userDetails.getId(),
@@ -67,7 +67,7 @@ public class AuthController {
             // Log successful login
             logService.logSuccessfulLogin(loginRequest.getEmail());
 
-            return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, jwtCookie.toString()).body(response);
+            return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION,jwt).body(response);
         } catch (AuthenticationException e) {
             // Authentication failed Log successful login
             logService.logFailedLogin(loginRequest.getEmail());
@@ -94,18 +94,17 @@ public class AuthController {
         user.setRole(ERole.ROLE_CUSTOMER);
         final User createUser = userService.saveUser(user);
         UserDetailsImpl userDetails=UserDetailsImpl.build(createUser);
-        ResponseCookie responseCookie=jwtUtils.generateJwtCookie(userDetails);
+        String jwt = jwtUtils.generateJwtToken(userDetails);
         UserInfoResponse response = new UserInfoResponse(createUser.getId(),
                 createUser.getEmail(),
                 createUser.getFullName(),
                 createUser.getRole().name());
-        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,responseCookie.toString()).body(response);
+        return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION,jwt).body(response);
     }
 
     @PostMapping("/logout/")
     public ResponseEntity<?> logoutUser() {
-        ResponseCookie cookie = jwtUtils.getCleanJwtCookie();
-        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString())
+        return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION, "")
                 .body(new InfoResponse("You've been signed out!"));
     }
 }

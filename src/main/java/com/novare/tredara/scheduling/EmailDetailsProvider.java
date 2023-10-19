@@ -1,7 +1,6 @@
 package com.novare.tredara.scheduling;
 
 import com.novare.tredara.models.Bid;
-import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.models.Notification;
 import com.novare.tredara.repositories.BidRepo;

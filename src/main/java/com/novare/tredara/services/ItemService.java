@@ -80,8 +80,7 @@ public class ItemService {
 
     public List<ItemDTO> getAllItems() {
         List<Item> items = this.itemRepo.findAll();
-        List<ItemDTO> itemDTOS = items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
-        return itemDTOS;
+        return items.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
@@ -123,9 +122,7 @@ public class ItemService {
         Page<Item> endingSoonItems = this.itemRepo.findAll(spec, pageable);
 
 
-        List<ItemDTO> itemDTOS = endingSoonItems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
-
-        return itemDTOS;
+        return endingSoonItems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
     }
 
     public List<ItemDTO> getLatestItems() {
@@ -139,9 +136,7 @@ public class ItemService {
         Page<Item> endingSoonitems = this.itemRepo.findAll(spec,pageable);
 
 
-        List<ItemDTO> itemDTOS = endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
-
-        return itemDTOS;
+        return endingSoonitems.stream().map(user -> this.itemToDto(user)).collect(Collectors.toList());
     }
 
 
@@ -164,20 +159,13 @@ public class ItemService {
         return items.stream().map(this::itemToDto).collect(Collectors.toList());
     }
 
-//    public List<ItemDTO> getItemsWonByUser(Long userId) {
-//        List<Item> items = itemRepo.findItemsWonByUser(userId);
-//        return items.stream().map(this::itemToDto).collect(Collectors.toList());
-//    }
-
 
     private Item dtoToItem(ItemDTO itemDTO) {
-        Item item = this.modelMapper.map(itemDTO, Item.class);
-        return item;
+        return this.modelMapper.map(itemDTO, Item.class);
     }
 
     public ItemDTO itemToDto(Item item) {
-        ItemDTO itemDTO = this.modelMapper.map(item, ItemDTO.class);
-        return itemDTO;
+        return this.modelMapper.map(item, ItemDTO.class);
     }
 
 }

@@ -23,4 +23,5 @@ public interface ItemRepo extends JpaRepository<Item, Long> , JpaSpecificationEx
     @Query("SELECT DISTINCT i FROM Item i JOIN i.bids b WHERE b.user.id = :userId")
     List<Item> findItemsByBidsUserId(@Param("userId") Long userId);
 
+
 }

@@ -8,7 +8,6 @@ import com.novare.tredara.services.ItemService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,6 @@ public class ItemController {
 
     private ItemService itemService;
     private JwtTokenUtil jwtTokenUtil;
-    @Value("${jwt.CookieName}")
-    private String jwtCookie;
 
     @Autowired
     public ItemController(ItemService itemService,JwtTokenUtil jwtTokenUtil) {

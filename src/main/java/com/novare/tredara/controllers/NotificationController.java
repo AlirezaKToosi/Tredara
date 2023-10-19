@@ -1,9 +1,7 @@
 package com.novare.tredara.controllers;
 
 import com.novare.tredara.payloads.ItemDTO;
-import com.novare.tredara.payloads.LogDTO;
 import com.novare.tredara.payloads.NotificationDTO;
-import com.novare.tredara.services.LogService;
 import com.novare.tredara.services.NotificationService;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

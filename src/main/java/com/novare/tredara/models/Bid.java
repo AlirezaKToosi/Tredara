@@ -26,6 +26,7 @@ import java.util.List;
         @Column(name = "BID_TIME")
         private Date bidTime;
 
+
         @ManyToOne(cascade = CascadeType.ALL)
         @JoinColumn(name = "USER_ID")
         private User user;

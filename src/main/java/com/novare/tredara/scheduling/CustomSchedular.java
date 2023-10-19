@@ -1,6 +1,5 @@
 package com.novare.tredara.scheduling;
 
-import com.novare.tredara.models.EActionType;
 import com.novare.tredara.models.EItemStatus;
 import com.novare.tredara.models.Item;
 import com.novare.tredara.repositories.ItemRepo;
