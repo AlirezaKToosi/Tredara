@@ -2,19 +2,19 @@
 
 ## Table of Contents
 
-- [About](#About)
-- [Getting Started](#Getting-Started)
-   - [JAR File](#JAR-File)
-   - [Docker](#Docker)
-   - [AWS](#Hosted-in-AWS)
-- [Project Managment](#implementation-and-design)
-   - [Architecture](#Architecture)
-   - [Backlog and UserStory](#Backlog-and-UserStory)
-   - [UseCase Diagram](#usecase-diagram)
-   - [Model Diagram](#model-diagram)
-   - [Class Diagram](#class-diagram)
-   - [FrontEnd Diagram](#FrontEnd-Diagram)
-- [Technologies and tools used in project](#Technologies-and-tools-used-in-project)
+- [About](#about)
+- [Getting Started](#getting-started)
+   - [JAR File](#jar-file)
+   - [Docker](#docker)
+   - [AWS](#hosted-in-aws)
+- [Project Managment](#project-management)
+   - [Architecture](#architecture-)
+   - [Backlog and UserStory](#backlog-and-userstory-)
+   - [UseCase Diagram](#usecase-diagram-)
+   - [Model Diagram](#usecase-diagram-)
+   - [Class Diagram](#class-diagram-)
+   - [FrontEnd Diagram](#frontend-diagram-)
+- [Technologies and tools used in project](#technologies-and-tools-used-in-project)
 - [Collaboration](#collaboration)
 - [Future improvement](#future-improvement)
 
@@ -47,18 +47,18 @@ To get started with the Tredara project, follow these steps:
 - cd Tredara
 - mvn install
 3. **Run the JAR file:**
-- java -jar ----------------------------------
+- java -jar app.jar
 ### Docker
 - cd Tredara
-- docker compose ------------------------------
+- docker-compose up --build --force-recreate
 
 ### Hosted in AWS
-- Link - http://-----------
+- Link - http://16.171.166.71/
 
 ### DataBase
 - Database(MySQL):
   - User : root
-  - Password : -----------------------
+  - Password : 11099121
   - Database Schema: tredara
   - Port : 3306
 
