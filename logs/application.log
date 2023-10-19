@@ -1,209 +1,104 @@
-2023-10-17T14:04:10.353+02:00  INFO 22260 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 22260 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
-2023-10-17T14:04:10.368+02:00  INFO 22260 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
-2023-10-17T14:04:12.064+02:00  INFO 22260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-17T14:04:12.182+02:00  INFO 22260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 5 JPA repository interfaces.
-2023-10-17T14:04:13.370+02:00  INFO 22260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-10-17T14:04:13.384+02:00  INFO 22260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-17T14:04:13.385+02:00  INFO 22260 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-17T14:04:13.562+02:00  INFO 22260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-17T14:04:13.562+02:00  INFO 22260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3053 ms
-2023-10-17T14:04:13.829+02:00  INFO 22260 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-17T14:04:13.937+02:00  INFO 22260 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-17T14:04:13.943+02:00  INFO 22260 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-17T14:04:14.211+02:00  INFO 22260 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-17T14:04:14.543+02:00  INFO 22260 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-17T14:04:14.577+02:00  INFO 22260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-17T14:04:15.317+02:00  INFO 22260 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@531a716c
-2023-10-17T14:04:15.320+02:00  INFO 22260 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-17T14:04:16.018+02:00  INFO 22260 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-17T14:04:17.236+02:00  INFO 22260 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-17T14:04:17.432+02:00  INFO 22260 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-17T14:04:18.401+02:00  INFO 22260 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-10-17T14:04:19.695+02:00  WARN 22260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-17T14:04:21.349+02:00  INFO 22260 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@618b147b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2246bfd1, org.springframework.security.web.context.SecurityContextHolderFilter@2acf3108, org.springframework.security.web.header.HeaderWriterFilter@37403f66, org.springframework.security.web.authentication.logout.LogoutFilter@d0993f0, com.novare.tredara.security.jwt.AuthTokenFilter@45cddfd3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d73f2a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9cdceeb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@181b8d0c, org.springframework.security.web.session.SessionManagementFilter@366fd3cb, org.springframework.security.web.access.ExceptionTranslationFilter@4678e08e, org.springframework.security.web.access.intercept.AuthorizationFilter@7e47a922]
-2023-10-17T14:04:21.899+02:00  INFO 22260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-10-17T14:04:21.919+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:04:21.921+02:00  INFO 22260 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 12.301 seconds (process running for 13.129)
-2023-10-17T14:04:22.468+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Item with item id 26 is Closed.
-2023-10-17T14:04:22.469+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Sending Email to all bidders and winner!
-2023-10-17T14:04:22.492+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Successfully sent Email to all bidders and winner
-2023-10-17T14:04:22.583+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Item with item id 27 is Closed.
-2023-10-17T14:04:22.583+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Sending Email to all bidders and winner!
-2023-10-17T14:04:22.590+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Sending Email to Winner rohit1
-2023-10-17T14:04:26.704+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Email sent to mailId aggarrohit1@gmail.com
-2023-10-17T14:04:26.704+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Mail sent to winner...
-2023-10-17T14:04:26.755+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Successfully sent Email to all bidders and winner
-2023-10-17T14:05:21.931+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:05:21.936+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:05:22.634+02:00  INFO 22260 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-17T14:05:22.634+02:00  INFO 22260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-17T14:05:22.636+02:00  INFO 22260 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-10-17T14:06:21.929+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:06:21.932+02:00  INFO 22260 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:06:45.072+02:00  INFO 22260 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-10-17T14:06:45.075+02:00  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-10-17T14:06:45.090+02:00  INFO 22260 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-10-17T14:06:49.375+02:00  INFO 12280 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 12280 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
-2023-10-17T14:06:49.378+02:00  INFO 12280 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
-2023-10-17T14:06:50.855+02:00  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-17T14:06:50.990+02:00  INFO 12280 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 5 JPA repository interfaces.
-2023-10-17T14:06:52.099+02:00  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2023-10-17T14:06:52.118+02:00  INFO 12280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-10-17T14:06:52.119+02:00  INFO 12280 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
-2023-10-17T14:06:52.302+02:00  INFO 12280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-10-17T14:06:52.303+02:00  INFO 12280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2817 ms
-2023-10-17T14:06:52.533+02:00  INFO 12280 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-17T14:06:52.645+02:00  INFO 12280 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
-2023-10-17T14:06:52.650+02:00  INFO 12280 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-17T14:06:52.908+02:00  INFO 12280 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-17T14:06:53.098+02:00  INFO 12280 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-17T14:06:53.129+02:00  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-10-17T14:06:53.683+02:00  INFO 12280 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6248cfab
-2023-10-17T14:06:53.686+02:00  INFO 12280 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-10-17T14:06:54.275+02:00  INFO 12280 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2023-10-17T14:06:55.353+02:00  INFO 12280 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-10-17T14:06:55.483+02:00  INFO 12280 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-17T14:06:56.252+02:00  INFO 12280 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2023-10-17T14:06:57.293+02:00  WARN 12280 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-10-17T14:06:58.605+02:00  INFO 12280 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78fd9a11, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d0993f0, org.springframework.security.web.context.SecurityContextHolderFilter@348523f2, org.springframework.security.web.header.HeaderWriterFilter@3c0a4c8b, org.springframework.security.web.authentication.logout.LogoutFilter@70fe15d, com.novare.tredara.security.jwt.AuthTokenFilter@224e7aa5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5afb0a4f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18cdacd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@8a607a9, org.springframework.security.web.session.SessionManagementFilter@da51aa8, org.springframework.security.web.access.ExceptionTranslationFilter@720da195, org.springframework.security.web.access.intercept.AuthorizationFilter@37ecff9]
-2023-10-17T14:06:59.040+02:00  INFO 12280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2023-10-17T14:06:59.053+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:06:59.056+02:00  INFO 12280 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 10.363 seconds (process running for 10.959)
-2023-10-17T14:06:59.216+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:07:00.632+02:00  INFO 12280 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-10-17T14:07:00.633+02:00  INFO 12280 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2023-10-17T14:07:00.635+02:00  INFO 12280 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2023-10-17T14:07:04.155+02:00 ERROR 12280 --- [http-nio-8080-exec-6] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
-2023-10-17T14:07:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:07:59.068+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:08:59.061+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:08:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:09:59.061+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:09:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:19.098+02:00  INFO 12280 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:22.889+02:00  INFO 12280 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:22.889+02:00  INFO 12280 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.641+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.641+02:00  INFO 12280 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.645+02:00  INFO 12280 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.649+02:00  INFO 12280 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.654+02:00  INFO 12280 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:24.655+02:00  INFO 12280 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:10:59.055+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:10:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:11:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:11:59.065+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:12:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:12:59.070+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:13:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:13:59.065+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:14:43.155+02:00  INFO 12280 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:43.159+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:43.159+02:00  INFO 12280 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:43.159+02:00  INFO 12280 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:43.160+02:00  INFO 12280 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:43.162+02:00  INFO 12280 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.843+02:00  INFO 12280 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.846+02:00  INFO 12280 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.852+02:00  INFO 12280 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.853+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.854+02:00  INFO 12280 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:47.863+02:00  INFO 12280 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:14:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:14:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:15:59.054+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:15:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:16:59.068+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:16:59.071+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:17:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:17:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:18:59.063+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:18:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:19:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:19:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:20:59.055+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:20:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:21:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:21:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:22:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:22:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:23:59.065+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:23:59.068+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:24:59.055+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:24:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:25:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:25:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:26:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:26:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:27:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:27:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:28:59.054+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:28:59.054+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:29:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:29:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:30:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:30:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:31:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:31:59.065+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:32:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:32:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:33:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:33:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:34:59.053+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:34:59.053+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:35:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:35:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:36:59.054+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:36:59.057+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:37:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:37:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:38:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:38:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:39:59.063+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:39:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:40:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:40:59.059+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:41:03.282+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:03.282+02:00  INFO 12280 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:03.287+02:00  INFO 12280 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:03.289+02:00  INFO 12280 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:03.301+02:00  INFO 12280 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:03.307+02:00  INFO 12280 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:41:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:41:59.061+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:42:44.339+02:00  INFO 12280 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:44.342+02:00  INFO 12280 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:44.343+02:00  INFO 12280 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:44.344+02:00  INFO 12280 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:44.348+02:00  INFO 12280 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:44.353+02:00  INFO 12280 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
-2023-10-17T14:42:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:42:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:43:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:43:59.070+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:44:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:44:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:45:59.058+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:45:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:46:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:46:59.069+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:47:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:47:59.062+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:48:59.066+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:48:59.068+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:49:59.060+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:49:59.063+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:50:59.054+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:50:59.056+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:51:59.064+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:51:59.067+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:52:59.068+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
-2023-10-17T14:52:59.070+02:00  INFO 12280 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
-2023-10-17T14:53:23.519+02:00  INFO 12280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-10-17T14:53:23.523+02:00  INFO 12280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-10-17T14:53:23.529+02:00  INFO 12280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-10-19T09:23:52.460+02:00  INFO 20792 --- [main] com.novare.tredara.TredaraApplication    : Starting TredaraApplication using Java 17.0.2 with PID 20792 (D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend\target\classes started by Rohit Agarwal in D:\Novare Potential Training\Project6_AuctionSite\Tredara-backend)
+2023-10-19T09:23:52.473+02:00  INFO 20792 --- [main] com.novare.tredara.TredaraApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-10-19T09:23:54.036+02:00  INFO 20792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-19T09:23:54.196+02:00  INFO 20792 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 5 JPA repository interfaces.
+2023-10-19T09:23:55.802+02:00  INFO 20792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-10-19T09:23:55.819+02:00  INFO 20792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-10-19T09:23:55.819+02:00  INFO 20792 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-10-19T09:23:56.014+02:00  INFO 20792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-10-19T09:23:56.015+02:00  INFO 20792 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3417 ms
+2023-10-19T09:23:56.288+02:00  INFO 20792 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-19T09:23:56.466+02:00  INFO 20792 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-10-19T09:23:56.472+02:00  INFO 20792 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-19T09:23:56.885+02:00  INFO 20792 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-19T09:23:57.293+02:00  INFO 20792 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-19T09:23:57.337+02:00  INFO 20792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-19T09:23:58.074+02:00  INFO 20792 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58f7215c
+2023-10-19T09:23:58.081+02:00  INFO 20792 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-19T09:23:58.840+02:00  INFO 20792 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-10-19T09:24:00.101+02:00  INFO 20792 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-19T09:24:00.309+02:00  INFO 20792 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-19T09:24:01.353+02:00  INFO 20792 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-10-19T09:24:02.647+02:00  WARN 20792 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-10-19T09:24:04.259+02:00  INFO 20792 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b3606e8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2395c168, org.springframework.security.web.context.SecurityContextHolderFilter@10b1f9f3, org.springframework.security.web.header.HeaderWriterFilter@14a4ba91, org.springframework.security.web.authentication.logout.LogoutFilter@632d8166, com.novare.tredara.security.jwt.AuthTokenFilter@5687ade6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51d2218e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@298eca94, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28322fd3, org.springframework.security.web.session.SessionManagementFilter@5afb0a4f, org.springframework.security.web.access.ExceptionTranslationFilter@1b7123e5, org.springframework.security.web.access.intercept.AuthorizationFilter@8a607a9]
+2023-10-19T09:24:04.711+02:00  INFO 20792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-19T09:24:04.734+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:24:04.737+02:00  INFO 20792 --- [main] com.novare.tredara.TredaraApplication    : Started TredaraApplication in 12.988 seconds (process running for 13.705)
+2023-10-19T09:24:04.967+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:24:15.675+02:00  INFO 20792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-19T09:24:15.676+02:00  INFO 20792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-10-19T09:24:15.678+02:00  INFO 20792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-10-19T09:24:20.208+02:00 ERROR 20792 --- [http-nio-8080-exec-6] c.n.tredara.security.jwt.JwtTokenUtil    : Invalid JWT token: JWT strings must contain exactly 2 period characters. Found: 0
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:24:37.193+02:00  INFO 20792 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:25:04.742+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:25:04.745+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:26:04.734+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:26:04.739+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:27:04.745+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:27:04.751+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:28:04.747+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:28:04.750+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:29:04.747+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:29:04.750+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:30:04.737+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:30:04.741+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:31:04.737+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:31:04.741+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:32:04.747+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:32:04.751+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:32:42.993+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:32:42.994+02:00  INFO 20792 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:32:43.009+02:00  INFO 20792 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:32:43.010+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:32:43.018+02:00  INFO 20792 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:32:43.020+02:00  INFO 20792 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:33:04.741+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:33:04.745+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:34:04.746+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:34:04.749+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:34:16.015+02:00  INFO 20792 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:16.015+02:00  INFO 20792 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:16.030+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:16.031+02:00  INFO 20792 --- [http-nio-8080-exec-10] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:16.031+02:00  INFO 20792 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:16.031+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:18.077+02:00  INFO 20792 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:18.077+02:00  INFO 20792 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.052+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.052+02:00  INFO 20792 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.056+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.061+02:00  INFO 20792 --- [http-nio-8080-exec-9] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.063+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:20.070+02:00  INFO 20792 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:21.167+02:00  INFO 20792 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:21.167+02:00  INFO 20792 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.402+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.403+02:00  INFO 20792 --- [http-nio-8080-exec-3] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.408+02:00  INFO 20792 --- [http-nio-8080-exec-7] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.409+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.411+02:00  INFO 20792 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:22.422+02:00  INFO 20792 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.239+02:00  INFO 20792 --- [http-nio-8080-exec-2] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.239+02:00  INFO 20792 --- [http-nio-8080-exec-4] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.239+02:00  INFO 20792 --- [http-nio-8080-exec-5] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.244+02:00  INFO 20792 --- [http-nio-8080-exec-8] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.248+02:00  INFO 20792 --- [http-nio-8080-exec-1] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:34:27.249+02:00  INFO 20792 --- [http-nio-8080-exec-6] c.n.tredara.controllers.FilesController  : Image file processed
+2023-10-19T09:35:04.742+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:35:04.744+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:36:04.742+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:36:04.745+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:37:04.740+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:37:04.743+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:38:04.747+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:38:04.750+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:39:04.738+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : Checking in Database if EndTime of some Item has passed
+2023-10-19T09:39:04.742+02:00  INFO 20792 --- [scheduling-1] c.n.tredara.scheduling.CustomSchedular   : No items to process for Notification and mail.
+2023-10-19T09:39:53.023+02:00  INFO 20792 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-10-19T09:39:53.027+02:00  INFO 20792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-10-19T09:39:53.036+02:00  INFO 20792 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
